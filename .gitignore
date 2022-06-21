@@ -1,5 +1,4 @@
 intro/
-**/*.jake.md
 **/*.andy.md
 **/node_modules/**
 **/.DS_Store
