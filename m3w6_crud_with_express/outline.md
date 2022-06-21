@@ -7,6 +7,19 @@
 - [ ] Using Chrome DevTools to see requests and responses
 - [ ] Practice debugging Express
 
+# Check-In
+
+- How are we feeling about Promises?
+- How are we feeling about Web Servers and Express?
+- Did you get a chance to go through EJS on Tuesday?
+
+# Intro
+
+- Turn theory into practice today
+- Use Express and EJS to render pages
+- Learn CRUD/Bread
+- Prep for Tinyapp
+
 # CRUD and BREAD
 
 - Vocabulary: Resource
