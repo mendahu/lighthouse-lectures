@@ -7,6 +7,19 @@
 - [ ] Using Chrome DevTools to see requests and responses
 - [ ] Practice debugging Express
 
+# Check-In
+
+- How are we feeling about Promises?
+- How are we feeling about Web Servers and Express?
+- Did you get a chance to go through EJS on Tuesday?
+
+# Intro
+
+- Turn theory into practice today
+- Use Express and EJS to render pages
+- Learn CRUD/Bread
+- Prep for Tinyapp
+
 # CRUD and BREAD
 
 - Vocabulary: Resource
@@ -21,10 +34,22 @@
 
 # Build an Express Server
 
+- `npm init`
+- `touch server.js`
+- `npm i express`
 - `const express = require('express')`
 - `const app = express()`
 - `const PORT = 8080`
 - `app.listen(8080, () => console.log('Server listening on port 8080'))`
+
+# Basic Route
+
+- Can we visit the site yet?
+- Show what it looks like if you use the browser before the route exists
+- Look at requests in Browser tools
+- Install morgan to show request
+  - `const morgan = require('morgan')`
+  - `app.use(morgan('dev'))`
 - Simple `/` route with a Hello World
   - `res.send()`
 
@@ -43,17 +68,20 @@
 # Browse
 
 - GET
-- Show what it looks like if you use the browser before the route exists
-- Look at requests in Browser tools
-- Install morgan to show request
-  - `const morgan = require('morgan')`
-  - `app.use(morgan('dev'))`
+
 - Start with `res.send()` and put some HTML in
   - Why isn't this useful?
+- Templates
+  - Dynamic data
+  - Views/Templates
+  - EJS
 - `res.render`
+- `npm i ejs`
+- `app.set('view engine', 'ejs')`
 - Make a browse EJS template for all resources
   - Talk about the `views` vocabulary and folder structure
 - talk about Template Variables, pass in resource
+- Talk about Server Rendering
 - Show Morgan/Dev tools to see better request data now
 
 # Read
@@ -78,6 +106,9 @@
   - body - how does it get data from the form????
   - `name` attribute of the `<input>` tag
 - Handle the request on the server
+- `npm i body-parser`
+- `const bodyParser = require("body-parser")`
+- `app.use(bodyParser.urlencoded({extended: true}))`
 - `res.redirect` vs `res.render`
   - Show POST / REDIRECT / GET pattern
   - Show in Morgan/Dev Tools
