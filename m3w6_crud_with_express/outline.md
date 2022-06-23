@@ -9,7 +9,6 @@
 
 # Check-In
 
-- How are we feeling about Promises?
 - How are we feeling about Web Servers and Express?
 - Did you get a chance to go through EJS on Tuesday?
 
