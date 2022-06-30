@@ -10,6 +10,8 @@
 - [ ] More Routing in Express
 - [ ] More HTTP methods
 - [ ] Method Override [Stretch]
+- [ ] JSON APIs [Stretch]
+- [ ] Alternatives to Express [Stretch]
 
 # Intro
 
