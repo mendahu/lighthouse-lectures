@@ -1,3 +1,5 @@
+# Checklist - Security and Advanced Web Servers
+
 - [ ] Storing passwords
 - [ ] Encrypted cookies
 - [ ] HTTP Secure (HTTPS)
@@ -12,7 +14,8 @@
 # Intro
 
 - Talk about Password storage, unsecured cookies, and https
-- Clone Warren's repository git@github.com:WarrenUhrich/lighthouse-labs-http-cookies-and-authentication.git
+- `https://github.com/WarrenUhrich/lighthouse-labs-http-cookies-and-authentication/tree/2022.06.28-web-flex-day-16may2022`
+- Clone Warren's repository `git@github.com:WarrenUhrich/lighthouse-labs-http-cookies-and-authentication.git`
 - Switch to branch 2022.06.28-web-flex-day-16may2022
 - Walk through app and recap it
   - Talk about routes - login/logout/register
@@ -62,7 +65,7 @@ app.use(
   cookieSession({
     name: "session",
     keys: ["purple-dinosaur", "green-dinosaur", "yellow-dinosaur"],
-    maxAge: MS_IN_A_DAY,
+    maxAge: MS_IN_A_DAY, // 24 * 60 * 60 * 1000
   })
 );
 ```
