@@ -1,0 +1,27 @@
+<nav>
+    <h2>Web Site Navigation</h2>
+    <ul>
+        <li>
+            <a href="/">
+                <% if (user) { %>
+                    Profile
+                <% } else { %>
+                    Sign In
+                <% } %>
+            </a>
+        </li>
+        <% if (!user) { %>
+            <li>
+                <a href="/register">
+                    Register
+                </a>
+            </li>
+        <% } else { %>
+            <li>
+                <form method="POST" action="/sign-out">
+                    <input type="submit" value="Sign Out">
+                </form>
+            </li>
+        <% } %>
+    </ul>
+</nav>

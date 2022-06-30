@@ -1,0 +1,33 @@
+{
+  "name": "lighthouse-labs-http-cookies-and-authentication",
+  "version": "1.0.0",
+  "description": "HTTP Cookies example!",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WarrenUhrich/lighthouse-labs-http-cookies-and-authentication.git"
+  },
+  "keywords": [
+    "HTTP",
+    "Cookies"
+  ],
+  "author": "Warren Uhrich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WarrenUhrich/lighthouse-labs-http-cookies-and-authentication/issues"
+  },
+  "homepage": "https://github.com/WarrenUhrich/lighthouse-labs-http-cookies-and-authentication#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.18"
+  }
+}

@@ -1,0 +1,24 @@
+<%- include('partials/_head.ejs') %>
+<%- include('partials/_navigation.ejs') %>
+
+    <% if (user) { // If signed in... %>
+
+        <p>
+            Currently signed in as:
+            <%= user.name %>
+            (<%= user.id %>)
+        </p>
+
+    <% } else { // If the user is not signed in... %>
+
+        <form method="POST" action="/">
+            <label for="user">Username:</label>
+            <input id="user" type="text" name="username">
+            <label for="pass">Password:</label>
+            <input id="pass" type="password" name="pass">
+            <input type="submit" value="Sign In!">
+        </form>
+
+    <% } %>
+
+<%- include('partials/_footer.ejs') %>
