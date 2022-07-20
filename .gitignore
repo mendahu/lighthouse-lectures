@@ -2,3 +2,4 @@ intro/
 **/*.andy.md
 **/node_modules/**
 **/.DS_Store
+auxiliary/
