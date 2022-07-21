@@ -68,7 +68,7 @@ const range = function (count, skipZero, descending) {
 
   - nested problems
 
-  ## Test 3, Question 3
+## Test 3, Question 3
 
 Let's revisit Question 01 which had us convert an array of arrays into an object.
 
@@ -90,6 +90,8 @@ const deepArrayToObject = function (arr) {
   // IMPLEMENT ME
 };
 ```
+
+## Test 3 Question 4
 
 Given a size in bits convert it to relevant size in B/KB/MB/GB/TB. Round your answers to two decimal places at most. Use base 10 for sizes.
 
