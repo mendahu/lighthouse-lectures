@@ -1,12 +1,12 @@
 # Complex Problem Solving
 
-- Red Green Refactor - importance of refactor
 - Building infrastructure around your problem solving process
+  - Writing out steps/scaffolding
 - Incremental Building - Plan Ahead vs Waste
-- Identifying Edge Cases
 - Looking for Patterns, using existing methods/functionality
-- Writing out steps/scaffolding
+- Identifying Edge Cases
 - Pseudocoding
+- Red Green Refactor - importance of refactor
 
 ## Test 2, Question 3
 
@@ -47,7 +47,7 @@ const range = function (count, skipZero, descending) {
 - Looking for patterns / identifying when recursion is needed
   - Recursion in place of loops
 - Base Case - what is it
-- When you need to track information outside the loop
+- When you need to track information outside the loop / When you need to know what iteration you're on
 
 ```javascript
 // Example Recursion in place of normal loop
@@ -125,7 +125,7 @@ const filesize = function (bytes) {
 # Array.reduce()
 
 - Learning Array Methods Importance
-- Why "reduce"
+- Why is it called "reduce"
 - Carrying along data
 - Walkthrough Reduce Functionality
 
@@ -185,7 +185,7 @@ const partition = function (arr, callback) {
 
 ## Test 3, Question 2
 
-rite a function which will split an array into two arrays (i.e. partition it).
+Write a function which will split an array into two arrays (i.e. partition it).
 
 It will take two parameters, the first is an array of Integer values, and the second will be a callback which will return a boolean. If the callback returns true for an element, it should be placed into the left array, otherwise it should be placed into the right array.
 
