@@ -8,16 +8,22 @@
 - [ ] Functions inside objects (using `this`)
 - [ ] Object iteration with `for..in`
 
+# Little Intro
+
+- Talk about myself
+- Talk about context
+
 # Working with Data
 
-- In all programming languages, ultimateley what you're doing is working with data
-- We create, store, change, manipulate, delete, alter, send, receive and define data.
+- In all programming languages, ultimately what you're doing is working with data
+- We create, store, change, manipulate, delete, compare, send, receive and define data.
 - Data is at the core of what we do - imagine facebook without data
 - You will become experts and working with data through bootcamp
 - Since we have to work with so much data, all programming languages including JS have a way to store it. Let's review how that works
 
 ```js
 const name = "Jake";
+console.log(name);
 ```
 
 - Review: keyword `const`, variable name, data
@@ -36,11 +42,38 @@ const name = "Jake";
   - Symbol
 
 * Primitives are immutable (do a let example)
-* Use name (string), age (number), isInstructor (boolean) examples
 
 # Objects
 
 - Why use an object? Sometimes, data is related
+  - Use name (string), age (number), isInstructor (boolean) examples
+
+```js
+// const name = "Jake"
+// const age = 37
+// const isInstructor = true;
+
+const person1 = {
+  name: "Jake",
+  age: 37,
+  isInstructor: true,
+};
+
+const person2 = {
+  name: "Jim",
+};
+
+const printData = (person) => {
+  console.log(
+    `${person.name} is ${person.age} years old and is ${
+      person.isInstructor ? "" : "not "
+    }an instructor.`
+  );
+};
+
+printData(person1);
+```
+
 - Objects allow us to group data together into a single place that can be referenced
 - Objects work using key value pairs, which are like their own little variables inside an object
   - Vocabulary is important here - Key vs Value, Property Vs Value, Property vs Key
@@ -52,11 +85,12 @@ const name = "Jake";
 
 ## Syntax
 
-- Object literal notation vs Constructor
+- Object literal notation vs Constructor (even skip new)
   - You can make empty objects, too, with both
 - Reading values
   - dot notation
   - square bracket notation with dynamic data
+  - Nested objects, chaining dots or brackets
 - Writing new values
   - dot notation
   - square bracket
@@ -157,6 +191,11 @@ console.log(jake.age);
 
 - Arrays and Objects are different and serve different purposes
 - Arrays are useful when you need to iterate over all the data, when the order is important, when the length of the data is important
+
+  - Iterate: List of emails to send
+  - Order: Directions
+  - Length: goals in a hockey game
+
 - Objects are useful when you want to group data that is related but usually only plan on accessing specific parts of it at once time, ie when you know the key
 - Objects useful for complex data with nested values
 - That being said, you _can_ loop over Objects using `for...in`
