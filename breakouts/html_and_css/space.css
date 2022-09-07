@@ -1,0 +1,85 @@
+body {
+  color: black;
+}
+
+p,
+span,
+ul,
+ol,
+a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+a,
+a:visited {
+  color: navy;
+}
+
+a:hover,
+a:active {
+  color: blue;
+}
+
+main {
+  background-color: white;
+}
+
+main > section:nth-child(even) {
+  background-color: lightgray;
+}
+
+.hero-section {
+  max-width: 600px;
+}
+
+.news-features-section > :first-child > :nth-child(2) {
+  max-width: 62%;
+}
+.news-features-section > :first-child > :first-child {
+  max-width: 32%;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-list-item {
+  display: flex;
+}
+
+.btn {
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.btn-success {
+  background-color: green;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-cta {
+  background-color: lightgrey;
+}
+
+.card {
+  width: 330px;
+  background-color: lightgray;
+  padding: 4px;
+  margin: 15px;
+}
