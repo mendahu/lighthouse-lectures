@@ -1,0 +1,33 @@
+.post {
+  background-color: lightgray;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.post > div:first-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.post > div:first-of-type > div:nth-of-type(2) {
+  margin-left: 15px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.like {
+  width: 30px;
+}
+
+.post h3 {
+  margin-top: 0px;
+}
