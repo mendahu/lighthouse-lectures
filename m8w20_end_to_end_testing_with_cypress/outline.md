@@ -4,6 +4,7 @@
 
 - Jest
   - Command line test runner
+  - Fast!!!
   - Based around testing `assertions`
   - Used for unit and integration testing (mostly)
 - Cypress
@@ -11,11 +12,22 @@
   - Performs operations and interacts with the site the way that a user would (eg. typing into input fields, clicking on buttons)
   - Used for integration and E2E testing (mostly)
 
+### Testing Strategy
+
+- Show trophy diagram
+
+### What is Cypress
+
+- Free, developer friendly software
+- A test runner
+- High fidelity, browser simulator
+
 ### Install Cypress
 
-- `npm install --save-dev cypress` or `yarn add --dev cypress`
+- `npm install --save-dev cypress@9.7.0` or `yarn add --dev cypress`
 - Open Cypress with `node_modules/.bin/cypress open`
 - Create a script called `cypress` to run the above
+- Show config file and example tests
 - Remove the example tests
 
 ### Create a new file `cypress/integration/01_cypress.spec.js`
@@ -60,6 +72,8 @@ describe("Filters", () => {
   });
 });
 ```
+
+- Spend some time talking about the syntax, Jquery, docs where to look them up
 
 ### Add the `baseUrl` key to `cypress.json`
 
