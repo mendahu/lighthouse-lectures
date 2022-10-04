@@ -55,8 +55,8 @@
 
 # Database
 
-- Create an object to store data
-- Add sample data (at least three)
+- Create an object to store data (object of objects with at least three properties, keyed to `id`)
+- Add sample data (at least three rows)
 
 # Scaffold
 
@@ -106,9 +106,7 @@
   - body - how does it get data from the form????
   - `name` attribute of the `<input>` tag
 - Handle the request on the server
-- `npm i body-parser`
-- `const bodyParser = require("body-parser")`
-- `app.use(bodyParser.urlencoded({extended: true}))`
+- `app.use(express.urlencoded({extended: true}))`
 - `res.redirect` vs `res.render`
   - Show POST / REDIRECT / GET pattern
   - Show in Morgan/Dev Tools
