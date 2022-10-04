@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One bread</title>
+  </head>
+  <body>
+    <a href="/breads">Go back to all Breads</a>
+    <h2><%= bread.name %></h2>
+    <p>Price: <%= bread.price %></p>
+    <p>How does it taste? <%= bread.taste %></p>
+    <hr />
+
+    <form action="/breads/<%= id %>" method="POST">
+      <input name="price" />
+      <button type="submit">Change Price</button>
+    </form>
+
+    <hr />
+
+    <form action="/breads/<%= id %>/delete" method="POST">
+      <button type="submit">Delete this bread</button>
+    </form>
+  </body>
+</html>

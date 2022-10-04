@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breads</title>
+  </head>
+  <body>
+    <h1>View the breads!!!</h1>
+
+    <% for (const bread in breads) { %>
+    <div>
+      <h2><a href="/breads/<%= bread %>"><%= breads[bread].name %></a></h2>
+      <p><%= breads[bread].price %></p>
+      <p><%= breads[bread].taste %></p>
+      <form action="/breads/<%= bread %>/delete" method="POST">
+        <button type="submit">Delete this bread</button>
+      </form>
+    </div>
+    <% } %>
+
+    <hr />
+    <h1>Add a new bread</h1>
+    <form method="POST" action="/breads/new">
+      Name: <input name="name" /><br />
+      Price: <input name="price" /><br />
+      Taste: <input name="taste" /><br />
+      <button type="submit">Add new Bread</button>
+    </form>
+  </body>
+</html>
