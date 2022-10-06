@@ -8,10 +8,11 @@ app.get("/frogs", (req, res) => {
 
 app.get("/frogs/random", (req, res) => {
   const randomNumber = Math.floor(Math.random() * 10);
-  console.log(randomNumber);
   res.json(frogs[randomNumber]);
 });
 
 app.listen(8080, () =>
-  console.log("Prepare yourself for some frogs on Port 8080")
+  console.log(
+    "🐸🐸🐸🐸🐸🐸 Prepare yourself for some frogs on Port 8080 🐸🐸🐸🐸🐸🐸"
+  )
 );
