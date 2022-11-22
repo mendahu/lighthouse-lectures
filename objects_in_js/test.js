@@ -127,3 +127,23 @@
 // console.log(jake.age);
 // jake.abilities.makeYounger();
 // console.log(jake.age);
+
+// Using `this` in a nested parent
+
+const jake = {
+  age: 37,
+  abilities: {
+    makeYounger: function () {
+      this.parent.age = this.parent.age - 1; // notice this.parent
+    },
+  },
+  init: function () {
+    // new init property which is a function
+    this.abilities.parent = this; // adds a parent property to abilities that references this
+    return this; // return this so that you can initialize the object
+  },
+}.init(); // immediately invote init, it returns the whole object back into the variable
+
+console.log(jake.age);
+jake.abilities.makeYounger();
+console.log(jake.age);
