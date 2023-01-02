@@ -1,0 +1,9 @@
+# W03D01 - Web Servers 101
+
+### To Do
+
+- [ ] Networking Review
+- [ ] Web Servers
+- [ ] Express
+- [ ] Middleware
+- [ ] Templating
