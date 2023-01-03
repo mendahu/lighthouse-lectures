@@ -42,3 +42,10 @@ RETURN as 11:12 PST / 2:12 EST
 - Code that runs (usually its a function) in between requests and responses and your handler
 - Middleware intercepts requests and response
 - Middleware is extensible - Express gives you the power to use middleware, but anyone can write middleware
+
+### Templating
+
+- Templates are HTML files that we can use Javascript to inject dynamic information in to
+- It allows us to have web documents that appear different depending on the request (like showing a user's name)
+- Express permits Templating out of the box, but you have to specify a templating engine to do the actual work
+- EJS is one such templating engine, another third party package
