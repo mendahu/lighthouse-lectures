@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div>
+      <a href="/about">Go to About</a>
+      <a href="/login">Go to Login</a>
+      <a href="/signup">Go to Signup</a>
+    </div>
+    <div>
+      <a href="/language/en">en</a>
+      <a href="/language/es">es</a>
+      <a href="/language/fr">fr</a>
+      <a href="/language/ko">ko</a>
+      <a href="/language/ja">ja</a>
+      <a href="/language/so">so</a>
+    </div>
+    <h1><%= heading %></h1>
+    <p><%= body %></p>
+
+    <form method="POST" action="/logout">
+      <button type="submit">Logout</button>
+    </form>
+  </body>
+</html>
