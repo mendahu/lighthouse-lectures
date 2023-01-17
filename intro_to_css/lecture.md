@@ -16,3 +16,5 @@
 - [ ] CSS Resets/Normalize
 - [ ] Specificity
 - [ ] Demo this week's project
+
+Return at 2:05 EST SEE YOU SOON
