@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/normalize.css" />
+    <link rel="stylesheet" href="/main.css" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      defer
+    ></script>
+    <script src="index.js" defer></script>
+    <title>Mars Time</title>
+  </head>
+  <body>
+    <header>
+      <h1>Time on Mars!!!</h1>
+    </header>
+    <main>
+      <h2>Current Spacecraft</h2>
+      <div class="main-display"></div>
+      <h2>Spacecraft List</h2>
+      <div class="spacecraft-list">
+        <article>
+          <button class="button">Load Spacecraft</button>
+        </article>
+      </div>
+      <h2>Fetch by Code</h2>
+      <div class="fetcher">
+        <form action="https://www.marsti.me/api/spacecraft" method="GET">
+          <label for="code">Spacecraft Code</label>
+          <input name="code" placeholder="msl" size="10" />
+          <button type="submit" class="button">Fetch</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <small>Built with ❤️ by</small>
+    </footer>
+  </body>
+</html>
