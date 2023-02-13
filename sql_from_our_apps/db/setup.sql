@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS destinations (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  start_year INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS agencies (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  founded INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS astronauts (
+  id serial PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  agency_id INTEGER REFERENCES agencies(id) ON DELETE CASCADE,
+  destination_id INTEGER REFERENCES destinations(id) ON DELETE CASCADE
+);
