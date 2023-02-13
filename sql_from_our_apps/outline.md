@@ -64,3 +64,139 @@ CREATE DATABASE astrostatus;
 ```sh
 npm i pg
 ```
+
+```js
+const pg = require("pg");
+
+const config = {
+  user: "postgres",
+  password: "postgres",
+  database: "astrostatus",
+  host: "localhost",
+  port: 5432,
+};
+
+const client = new pg.Client(config);
+
+client.connect().then(() => {
+  console.log("Connected to Database");
+});
+
+client.query(`SELECT * FROM astronauts`).then((res) => console.log(res));
+```
+
+- Show response from the postgres pg library, explain how you'll often have to drill down to `res.rows`
+
+## Protecting App Secrets
+
+- The username, password, database name, port, host - all of these configs are considered privileged information. Knowing any or all of these gives you some ability to connect to this database
+- We should protect these, which means that we probably don't want them showing up in our GitHub repository - we don't want to commit the actual data here.
+- We can use enviornment variables to set them instead
+- Simply, you can put an env variable in the start command. Let's try it with the port
+
+```sh
+DB_PORT=5432 nodemon server.js
+```
+
+```js
+const DB_PORT = process.env.DB_PORT;
+```
+
+- Generally however, if you have a lot of variables and want an easy way to modify them, we use a `.env` file and access it with a package like `dotenv`
+
+```sh
+touch .env
+npm i dotenv
+```
+
+```js
+require("dotenv").config();
+```
+
+```
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_HOST=localhost
+DB_NAME=astrostatus
+```
+
+```js
+const config = {
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+};
+```
+
+- Remember to include .env in your gitignore!
+
+## Serving Data
+
+- Let's connect our front page view to a simple select statement
+- Show pre-made view
+- Setup route to render the view with some sample data
+
+```js
+app.get("/", (req, res) => {
+  // sample data to test that view works
+  const templateVars = {
+    astronauts: [
+      {
+        name: "Jake",
+        agency: "CSA",
+        destination: "ISS",
+      },
+    ],
+  };
+  res.render("index", templateVars);
+});
+```
+
+- Work up to this query incrementally
+  - Take the chance to talk about aliasing
+
+```js
+client
+  .query(
+    `SELECT 
+        astronauts.name as name, 
+        agencies.name as agency,
+        destinations.name as destination 
+        FROM astronauts 
+        JOIN agencies on agencies.id = astronauts.agency_id
+        JOIN destinations on destinations.id = astronauts.destination_id`
+  )
+  .then((res) => console.log(res.rows));
+```
+
+- Move our res.render into the .then
+- Show variable collision problem
+
+```js
+client
+  .query(
+    `SELECT
+        astronauts.name as name,
+        agencies.name as agency,
+        destinations.name as destination
+        FROM astronauts
+        JOIN agencies on agencies.id = astronauts.agency_id
+        JOIN destinations on destinations.id = astronauts.destination_id`
+  )
+  .then((response) => {
+    const templateVars = {
+      astronauts: response.rows,
+    };
+    res.render("index", templateVars);
+  })
+  .catch((err) => {
+    console.error(err);
+    const templateVars = {
+      astronauts: [],
+    };
+    res.render("index", templateVars);
+  });
+```
