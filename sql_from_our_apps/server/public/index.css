@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgray;
+}
+
+button {
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: rgb(59, 59, 183);
+  color: white;
+}
+
+input,
+select {
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+td,
+th {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+body > form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+body > form > input,
+body > form > select {
+  width: 270px;
+}
