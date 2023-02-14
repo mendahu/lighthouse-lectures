@@ -3,16 +3,17 @@ INSERT INTO agencies (id, name, founded) VALUES
   (2, 'ESA', 1975),
   (3, 'CSA', 1989),
   (4, 'Roscosmos', 1992),
-  (5, 'CNSA', 1993);
+  (5, 'CNSA', 1993),
+  (6, 'JAXA', 2003);
 
 INSERT INTO astronauts (name, destination, agency_id) VALUES
-  ('Kayla Barron', 'ISS', 1),
-  ('Matthias Maurer', 'ISS', 2),
-  ('Thomas Marshburn', 'ISS', 1),
-  ('Raja Chari', 'ISS', 1),
-  ('Oleg Artemyev', 'ISS', 4),
-  ('Denis Mateev', 'ISS', 4),
-  ('Sergey Korsakov', 'ISS', 4),
-  ('Ye Guangfu', 'Tiangong', 5),
-  ('Wang Yaping', 'Tiangong', 5),
-  ('Zhai Zhigang', 'Tiangong', 5);
+  ('Francisco Rubio', 'ISS', 1),
+  ('Nicole Mann', 'ISS', 1),
+  ('Josh Cassada', 'ISS', 1),
+  ('Koichi Wakata', 'ISS', 6),
+  ('Sergey Prokopyev', 'ISS', 4),
+  ('Dmitry Petelin', 'ISS', 4),
+  ('Anna Kikina', 'ISS', 4),
+  ('Fei Junlong', 'Tiangong', 5),
+  ('Deng Qingming', 'Tiangong', 5),
+  ('Zhang Lu', 'Tiangong', 5);
