@@ -4,27 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css" />
     <title>Astrostatus</title>
   </head>
   <body>
     <h1>Welcome to Astrostatus!</h1>
-    <p>See who's in space!</p>
-    <h2>Current People in Space</h2>
-    <table>
-      <thead>
-        <th>Astronaut</th>
-        <th>Agency</th>
-        <th>Destination</th>
-      </thead>
-      <tbody>
-        <% for (const a of astronauts) { %>
-        <tr>
-          <td><%= a.name %></td>
-          <td><%= a.agency %></td>
-          <td><%= a.destination %></td>
-        </tr>
-        <% } %>
-      </tbody>
-    </table>
   </body>
 </html>
