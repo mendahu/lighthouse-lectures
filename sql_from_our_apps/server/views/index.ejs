@@ -15,5 +15,43 @@
   </head>
   <body>
     <h1>Welcome to Astrostatus!</h1>
+    <p>Learn who is in space!</p>
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Agency</th>
+        <th>Destination</th>
+        <th>Change Destination</th>
+      </thead>
+      <tbody>
+        <% for (const a of astronauts) { %>
+        <tr>
+          <td><%= a.name %></td>
+          <td><%= a.agency %></td>
+          <td><%= a.destination %></td>
+          <td>
+            <form action="/astronauts/<%= a.id %>" method="POST">
+              <button type="submit">Send to:</button>
+              <input name="destination" />
+            </form>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+    <h2>Send astronaut to space!!!1</h2>
+    <form method="POST" action="/api/astronauts/new">
+      <label for="name">Name:</label>
+      <input name="name" />
+      <label for="agency_id">Agency:</label>
+      <select name="agency_id">
+        <% for (const a of agencies) { %>
+        <option value="<%= a.id %>"><%= a.name %></option>
+        <% } %>
+      </select>
+      <label for="destination">Destination:</label>
+      <input name="destination" />
+      <button type="submit">Send to space!</button>
+    </form>
   </body>
 </html>
