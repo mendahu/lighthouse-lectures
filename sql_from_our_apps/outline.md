@@ -17,7 +17,8 @@
   - The database has its own software that runs separately from node
   - It's really the third piece of a trifecta
 
-- When we use these three pieces together, we put the server at the heart of everything we do. The server has one of the most important jobs because it is the traffic cop - its managing the client, the db, other APIs and more.
+- When we use these three pieces together, we put the server at the heart of everything we do. 
+- The server has one of the most important jobs because it is the traffic cop - its managing the client, the db, other APIs and more.
 - Because our database is the most valuable part of an app - think of how useful a social media site would be without its users and posts etc - we shelter it away in its own place, and only allow our server to access it
 - Clients _neveR_ connect to a database directly.
 - Databases are password protected, and we have to take great care in protecting the credentials
