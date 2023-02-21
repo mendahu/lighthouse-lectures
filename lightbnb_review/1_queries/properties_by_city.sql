@@ -1,3 +1,4 @@
+
 SELECT
   properties.id,
   city,

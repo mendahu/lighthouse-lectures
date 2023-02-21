@@ -31,8 +31,8 @@ CREATE TABLE IF NOT EXISTS properties (
 
 CREATE TABLE IF NOT EXISTS reservations (
   id SERIAL PRIMARY KEY,
-  guest_id INTEGER references users(id) ON DELETE CASCADE,
-  property_id INTEGER references properties(id) ON DELETE CASCADE,
+  guest_id INTEGER references users(id) ON DELETE SET NULL,
+  property_id INTEGER references properties(id) ON DELETE SET NULL,
   start_date DATE NOT NULL,
   end_date DATE NOT NULL
 );

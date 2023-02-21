@@ -43,7 +43,10 @@ exports.getUserWithEmail = getUserWithEmail;
  * @return {Promise<{}>} A promise to the user.
  */
 const getUserWithId = function (id) {
-  return Promise.resolve(users[id]);
+  // return Promise.resolve(users[id]);
+  return client
+    .query(`SELECT id, name, email FROM users WHERE id = $1`, [id])
+    .then((result) => result.rows[0] || null);
 };
 exports.getUserWithId = getUserWithId;
 
@@ -82,12 +85,7 @@ exports.getAllReservations = getAllReservations;
  */
 const getAllProperties = function (options, limit = 10) {
   return client
-    .query(
-      `
-    SELECT * FROM properties LIMIT $1
-  `,
-      [limit]
-    )
+    .query(`SELECT * FROM properties LIMIT $1`, [limit])
     .then((result) => result.rows);
 };
 exports.getAllProperties = getAllProperties;

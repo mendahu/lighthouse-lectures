@@ -44,3 +44,5 @@
 - Spotted some weird layouts of the data (`properties` property is unnecessary)
 
 # Other questions
+
+- Refactoring the Fucntions - Karilyn
