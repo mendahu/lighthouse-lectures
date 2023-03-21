@@ -1,0 +1,25 @@
+.searchbar {
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar-input,
+.searchbar-button {
+  margin: 1rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  border: 1px solid rgb(160, 160, 160);
+  box-shadow: 1px 1px 2px 0px;
+}
+
+.searchbar-input {
+  width: 400px;
+}
+
+.searchbar-input:focus {
+  border-color: red;
+}
+
+.searchbar-button:active {
+  box-shadow: 0px 0px 2px 0px;
+}
