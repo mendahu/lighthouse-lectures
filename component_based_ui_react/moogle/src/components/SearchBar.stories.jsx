@@ -9,11 +9,12 @@ export default {
 
 const Template = (args) => <SearchBar {...args} />;
 
-export const Primary = Template.bind({});
-
-Primary.args = {
-  label: "Search",
-};
+export const Primary = Template.bind(
+  {},
+  {
+    label: "Search",
+  }
+);
 
 export const Secondary = Template.bind({});
 
