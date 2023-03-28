@@ -167,8 +167,8 @@ const UserCard = (props) => {
   }, [toUpperCase])
 
   useEffect(() => {
-  document.title = `${user.firstName} ${user.lastName}`
-}, [user])
+    document.title = `${user.firstName} ${user.lastName}`
+  }, [user])
 
   return (
     <div>
@@ -178,6 +178,39 @@ const UserCard = (props) => {
     </div>
   )
 }
-
-
 ```
+
+### Cleanup
+
+```jsx
+const [timer, setTimer] = useState(0);
+
+useEffect(() => {
+  const myInterval = setInterval(() => {
+    setTimer((timer) => timer + 1);
+  }, 1000);
+
+  const cleanup = () => {
+    clearInterval(myInterval);
+  };
+
+  return cleanup;
+}, []);
+```
+
+## What not to do!!!
+
+- Don't use useEffect to synchronize state!!!
+
+```jsx
+const [user, setUser] = useState({});
+const [firstName, setFirstName] = useState("");
+
+useEffect(() => {
+  setFirstName(user.firstName);
+}, [user]);
+
+// const firstName = user.firstName
+```
+
+### Demo APP?????
