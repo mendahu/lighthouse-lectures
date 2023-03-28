@@ -48,7 +48,7 @@ function App() {
 
   useEffect(() => {
     setLoading(true);
-    fetchBooks("").then((books) => {
+    fetchBooks("dinosaur").then((books) => {
       setLoading(false);
       setBooks(books);
     });
