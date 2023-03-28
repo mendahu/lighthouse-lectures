@@ -2,24 +2,32 @@
 
 ### To Do
 
-- [ ] Rules for Hooks
 - [ ] Pure Functions and Side Effects
+- [ ] Side Effects in React
 - [ ] `useEffect`
 - [ ] Cleanup
 - [ ] Dependencies
 - [ ] _useEffect_ Flow
-
-### Rules For Hooks
-
-1. Don't call Hooks inside loops, conditions, or nested functions. **Always use Hooks at the top level of your React functions.**
-2. Only call Hooks from React functions.
-3. All hooks start with the prefix `use`.
+- [ ] Rules for Hooks
+- [ ] Demo
 
 ### Pure Functions
 
 - Review Pure Functions
 - No side effects, same result each time if the same parameters are passed to it.
 - Do some normal functions
+
+```js
+const joinName = (firstName, lastName) => {
+  return firstName + lastName;
+};
+const firstName = "Jake";
+
+const joinName = (lastName) => {
+  return firstName + lastName;
+};
+```
+
 - Do a React component.
 
 ```jsx
@@ -33,25 +41,35 @@ const UserCard = (props) => {
     </div>
   )
 }
+
+// vs
+
+const defaultAvatar = "/public/avatar.jpg";
+
+const UserCard = (props) => {
+  return (
+    <div>
+      <img src={defaultAvatar} />
+      <h1>{props.name}</h1>
+      <h2>{props.email}</h2>
+      <p>{props.bio}</p>
+    </div>
+  );
+};
 ```
-
-### Side Effects
-
-- Any operation that modifies the state of the computer or interacts with something outside of your program is said to have a **side effect**
-- Common _side effects_:
-  - Interacting with Browser or Node APIs (like Setting timers or intervals)
-  - Modifying the DOM directly (instead of relying on React)
-  - Establishing socket connections (eg. `ws` or `Socket.io`)
-  - Retrieving data from an API (eg. `axios`, `jQuery`, or the `fetch` API)
 
 ### Side Effects in React
 
+- In any functional programming, you have to think carefully about side effects or function impurities.
+- Anything happening outside of the function can affect it still and that can produce undesired behaviour
+- This is especially true in React, because we have an extra layer of functionality that depends on the function process - props go in, components come out
+- Our first foray into these side effects was useState
 - `useState` makes a component impure
 - React handles the side effects of hooks automatically for you - it's part of the magic
 - When the state is updated, React re-renders the component automatically. It knows what is affected by the change.
 
 ```jsx
-const UserCard = (props) => {
+const UserCard = () => {
   const [user, setUser] = useState({})
   return (
     <div>
@@ -63,6 +81,18 @@ const UserCard = (props) => {
   )
 }
 ```
+
+### Side Effects
+
+- Any operation that modifies the state of the computer or interacts with something outside of your program is said to have a **side effect**
+- If you think of the JavaScript runtime (V8), it can manage basic thing like state. It's still an impure function, but it remains in the scope of the runtime and is just more javascript.
+- But what happens if we need to do something that leaves the runtime? These are side effects.
+- Common _side effects_:
+
+  - Interacting with Browser or Node APIs (like Setting timers or intervals)
+  - Modifying the DOM directly (instead of relying on React)
+  - Establishing socket connections (eg. `ws` or `Socket.io`)
+  - Retrieving data from an API (eg. `axios`, `jQuery`, or the `fetch` API)
 
 - But what about other side effects????
 
@@ -134,6 +164,12 @@ useEffect(() => {
   return cleanup;
 }, []);
 ```
+
+### Rules For Hooks
+
+1. Don't call Hooks inside loops, conditions, or nested functions. **Always use Hooks at the top level of your React functions.**
+2. Only call Hooks from React functions.
+3. All hooks start with the prefix `use`.
 
 ### DEMO Book Lover
 
@@ -250,4 +286,25 @@ useEffect(() => {
 useEffect(() => {
   document.title = `Time: ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`;
 }, [time]);
+```
+
+### What not to do
+
+- Don't use useEffect to synchornize state. Don't store duplicate state!
+
+NO
+
+```jsx
+const [amountOfBooks, setAmountOfBooks] = useState(undefined);
+
+useEffect(() => {
+  setAmountOfBooks(books.length);
+}, [books]);
+```
+
+This isn't a side effect, it's part of JS and it's state at that
+You can just use regular functions to get derivative state
+
+```js
+const amountOfBooks = books.length;
 ```

@@ -2,8 +2,11 @@
 
 ### To Do
 
-- [ ] Rules for Hooks
 - [ ] Pure Functions and Side Effects
+- [ ] Side Effects in React
 - [ ] `useEffect`
-- [ ] Dependencies
 - [ ] Cleanup
+- [ ] Dependencies
+- [ ] _useEffect_ Flow
+- [ ] Rules for Hooks
+- [ ] Demo
