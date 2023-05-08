@@ -132,6 +132,7 @@ Return at 7 minutes past the hour!!!
 - At the beginning of a project you have to make some decisions
 
 - Do I write some code myself or use a library
+  - Left Pad - https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code
 - What if anything do I need to serve tthe roles of db, backend, frontend, etc.
 - Do I learn a new thing that is optimized for my use case, or use a thing I already know that is maybe less efficient?
 
