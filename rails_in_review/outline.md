@@ -1,5 +1,7 @@
 # Rails Review
 
+Cloen Jungle as an example app as needed: git@github.com:lighthouse-labs/jungle-rails.git
+
 ## Model View Controller
 
 - **Model:** Responsible for handling data logic (eg. database queries)
