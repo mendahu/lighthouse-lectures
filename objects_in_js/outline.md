@@ -50,12 +50,12 @@ console.log(name);
 
 ```js
 // const name = "Jake"
-// const age = 37
+// const age = 38
 // const isInstructor = true;
 
 const person1 = {
   name: "Jake",
-  age: 37,
+  age: 38,
   isInstructor: true,
 };
 
@@ -77,11 +77,11 @@ printData(person1);
 - Objects allow us to group data together into a single place that can be referenced
 - Objects work using key value pairs, which are like their own little variables inside an object
   - Vocabulary is important here - Key vs Value, Property Vs Value, Property vs Key
-  - Keys are always strings, values can be anything that can otherwise be stored in a variable
+  - Keys are always strings or symbols, values can be anything that can otherwise be stored in a variable
 - Example, group name, age, isInstructor together
 - Name space is valuable as well, if you have multiple entities with similar data
 - Example of student in the database
-- All languages have some kind of object like structure, it might be called a Map, a Dictionary, a Hash)
+- All languages have some kind of object like structure, it might be called a Map, a Dictionary, a Hash
 
 ## Syntax
 
@@ -105,27 +105,27 @@ printData(person1);
 ## Primitive
 
 ```js
-const age = 37;
+const age = 38;
 
 const printNum = (num) => {
   console.log(num);
 };
 
-printNum(age); // 37
+printNum(age); // 38
 ```
 
 - In this case, `age` and `num` do not refer to the same specific value. It's in a new drawer. Here's how we can test it.
 
 ```js
-const age = 37;
+const age = 38;
 
 const printNum = (num) => {
   num = num + 1;
   console.log(num);
 };
 
-printNum(age); // 38
-console.log(age); //37
+printNum(age); // 39
+console.log(age); //38
 ```
 
 ## Objects
@@ -136,7 +136,7 @@ console.log(age); //37
 ```js
 const jake = {
   name: "Jake",
-  age: 37,
+  age: 38,
   isInstructor: true,
 };
 
@@ -145,8 +145,8 @@ const printAge = (instructor) => {
   console.log(instructor.age);
 };
 
-printAge(jake); // 38
-console.log(jake.age); // 38
+printAge(jake); // 39
+console.log(jake.age); // 39
 ```
 
 # Other data than primitives inside objects
@@ -160,7 +160,7 @@ console.log(jake.age); // 38
 ```js
 const jake = {
   name: "Jake",
-  age: 37,
+  age: 38,
   isInstructor: true,
   sayHello: function() {
     console.log("Hello!)
@@ -175,7 +175,7 @@ jake.sayHello();
 ```js
 const jake = {
   name: "Jake",
-  age: 37,
+  age: 38,
   isInstructor: true,
   makeYounger: function () {
     this.age = this.age - 1;
