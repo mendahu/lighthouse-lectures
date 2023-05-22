@@ -34,7 +34,15 @@
 
 ## Assistance Requests
 
-- Compass
-- How to make one
-  - Joining existing
-- How to be successful
+- Two ways to initiate
+  - Directly through Compass
+  - Using Discord `/request-assistance`
+- Will open a Discord forum post in your Assistance-Request channel
+- Larry the AI Bot will try to help
+- A Mentor will join
+- Success Tips
+  - Be descriptive in your request
+    - don't copy paste errors - try to paraphrase them
+      - ensures you read the message
+      - helps the mentor know where you're at
+    - tell us what you already tried
