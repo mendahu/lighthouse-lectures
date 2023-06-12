@@ -9,7 +9,7 @@
 
 - The majority of networking is made up of server/client connections
 - In general, servers have information and clients want information
-- The labels define the role of that interaction, not the permanent role of the individual
+- The labels define the role of that interaction, not the permanent job of the individual machine
 
 ### OSI Model and Network Layers
 
