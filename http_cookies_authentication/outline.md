@@ -8,6 +8,7 @@
 ## Cookies
 
 - A cookie is a small piece of information that the server creates but the client stores
+- Cookies are key value pairs as strings
 - It live on the client computer, set and stored by the browser based on what the server told it to do
 - Cookies are keyed to a url (a host and path)
 - Anytime a request is sent to the url/path, the cookie goes with it
@@ -312,7 +313,10 @@ app.post("/register", (req, res) => {
   }
 
   // generate a unique identifier and add the new user to users object
-  const id = uuid().split("-")[0];
+  const generateId = () => {
+    return Math.random().toString(16).slice(2, 8);
+  };
+  const id = generateId();
   const newUser = {
     id,
     email,
