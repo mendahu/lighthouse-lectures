@@ -26,6 +26,8 @@ app.get("/language/:lang", (req, res) => {
   res.redirect("/");
 });
 
+// app.get("/users/:id") // maybe a profile??
+
 app.get("/", (req, res) => {
   let userLanguage = req.cookies.lang || "en";
 
