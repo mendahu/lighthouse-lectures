@@ -16,3 +16,7 @@
 - [ ] CSS Resets/Normalize
 - [ ] Specificity
 - [ ] Demo this week's project
+
+# Semantic Markup
+
+:20
