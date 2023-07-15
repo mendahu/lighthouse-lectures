@@ -1,0 +1,34 @@
+header {
+  height: 60px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  text-transform: uppercase;
+}
+
+header div {
+  height: 100%;
+}
+
+header img {
+  height: 100%;
+}
+
+main {
+  background-color: lightgray;
+}
+
+footer {
+  background-color: lightgreen;
+}
+
+.base-padding {
+  padding: 1rem;
+}
+
+aside {
+  color: white;
+  background-color: grey;
+  border-radius: 8px;
+}
