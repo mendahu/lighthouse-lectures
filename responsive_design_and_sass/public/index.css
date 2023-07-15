@@ -30,5 +30,6 @@ footer {
 aside {
   color: white;
   background-color: grey;
+  width: 1000px;
   border-radius: 8px;
 }
