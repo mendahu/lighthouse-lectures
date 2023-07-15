@@ -20,15 +20,23 @@
 
 - Some problems
 
+  - Whole site was designed on a screen 1200px wide
   - scaling on mobile
   - empty space at bottom of page
   - notice looks kind of large and unweildy
   - looks bad on large screens
+  - aside width is broken
 
 - show page and walk through some elements.
 - header/footer/main
 - aside
 - header elements
+
+- Show Chrome Dev Tools
+  - Mobile view
+  - Responsive
+  - Different presets
+  - Scaling
 
 ### Scaling - Viewport Meta Tag
 
@@ -52,13 +60,32 @@
 
 - Instead of specifying element dimensions using fixed units (eg. pixels), we can use relative units to help things scale appropriately for various display sizes
 
-#### Percentage
+#### Percentage - Aside width
 
 - Width, height, font-size, and a variety of other dimensions can be specified as a percentage
 - Bear in mind that the percentage is based on the dimensions of the parent element, not the webpage itself
 - eg. If the parent is `300px` wide and the child has a width of `50%`, then the child will be `150px` wide
 
-#### `vh` and `vw`
+- adjust aside width to 89%
+- show how it responds to wider screens
+- demonstrate how fixing the parent (main) would change things
+
+#### `max-width` && `min-width` - fixing large screens
+
+- `max-width` and `min-width` are used to set a maximum and minimum width respectively
+- The element will not grow beyond the `max-width` nor shrink below the `min-width`
+- Useful for making sure that your responsive elements don't grow or shrink to a point where they break the layout
+
+- add layout class and put on innner divs
+
+```css
+.layout {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+```
+
+#### `vh` and `vw` - fil
 
 - One `vh` is equal to `1%` of the viewport height
 - An element with a style of `height: 50vh;` will be 50% the height of the screen
@@ -91,12 +118,6 @@ p.relative {
   border-width: 2em;
 }
 ```
-
-#### `max-width` && `min-width`
-
-- `max-width` and `min-width` are used to set a maximum and minimum width respectively
-- The element will not grow beyond the `max-width` nor shrink below the `min-width`
-- Useful for making sure that your responsive elements don't grow or shrink to a point where they break the layout
 
 #### Media Queries
 
