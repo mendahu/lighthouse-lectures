@@ -31,5 +31,6 @@ aside {
   color: white;
   background-color: grey;
   width: 1000px;
+  margin-inline: auto;
   border-radius: 8px;
 }
