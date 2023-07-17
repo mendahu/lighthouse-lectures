@@ -26,6 +26,7 @@
   - notice looks kind of large and unweildy
   - looks bad on large screens
   - aside width is broken
+  - font size to be more dramatic
 
 - show page and walk through some elements.
 - header/footer/main
@@ -91,33 +92,39 @@
 - An element with a style of `height: 50vh;` will be 50% the height of the screen
 - `vw` works the same way except it's `1%` of the viewport width
 
+- set body to 100vh to fill the space
+- add display flex to body
+- add flex direction column to body
+- add flex grow to main
+
 #### `em` and `rem`
 
 - An `em` is a relative measure based on the font-size of the parent component
 - eg. If the parent has a font-size of `24px` and the child is `3em` wide, then it will be `72px` wide
 - A `rem` is a **root** _em_, instead of being based on the parent's font-size, it is based on the font-size of the root element (html)
 
+- take over base font size (add font-size 10px to html)
+- set p, h3, h2, h1 to REM units
+
 ```css
-/* pixels */
-p.pixel {
-  width: 200px;
-  height: 400px;
+p {
+  font-size: 1rem;
 }
 
-/* vh and vw */
-p.viewport {
-  width: 25vw;
-  height: 50vh;
-  font-size: 10vh;
+h3 {
+  font-size: 1.6rem;
 }
 
-/* em and rem */
-p.relative {
-  width: 25em;
-  height: 40rem;
-  border-width: 2em;
+h2 {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 2.6rem;
 }
 ```
+
+- add emphasis class to <span> around "biggest" in paragraph, set to 1.2em
 
 #### Media Queries
 
@@ -127,11 +134,27 @@ p.relative {
 - _Media features_ include things like `aspect-ratio`, `device-height`, and `orientation`
 - We can use multiple media queries to target various device sizes and orientations
 
+- hide header text on mobile
+
 ```css
-@media only screen and (max-width: 500px) {
-  /* these styles will be applied if the screen width is less than 500px */
-  body {
-    background-color: lightblue;
+@media only screen and (max-width: 575px) {
+  header p {
+    display: none;
+  }
+}
+```
+
+- move aside to the side on desktop
+- add wrapper div to not-aside in main
+
+```css
+@media only screen and (min-width: 600px) {
+  main > div {
+    display: flex;
+  }
+
+  aside {
+    max-width: 200px;
   }
 }
 ```
