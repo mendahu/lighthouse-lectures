@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <title>Responsive Frog Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="public/normalize.css" />
     <link rel="stylesheet" href="public/index.css" />
   </head>
   <body>
     <header class="base-padding">
-      <div>
+      <div class="layout">
         <div>
           <img src="public/frog.svg" alt="Frog Inc. Logo" />
         </div>
@@ -17,19 +18,21 @@
       </div>
     </header>
     <main class="base-padding">
-      <div>
-        <h2>Welcome to Frogs Inc.!</h2>
-        <p>
-          We are the biggest supplier of frog related services in town! Don't go
-          anywhere else! You won't find better prices, higher-quality goods, or
-          greener services.
-        </p>
-        <h3>Services include</h3>
-        <ul>
-          <li>Moisture sprays</li>
-          <li>Fly meals (delivered)</li>
-          <li>Tongue cleaning</li>
-        </ul>
+      <div class="layout">
+        <section>
+          <h2>Welcome to Frogs Inc.!</h2>
+          <p>
+            We are the <span class="emphasis">biggest</span> supplier of frog
+            related services in town! Don't go anywhere else! You won't find
+            better prices, higher-quality goods, or greener services.
+          </p>
+          <h3>Services include</h3>
+          <ul>
+            <li>Moisture sprays</li>
+            <li>Fly meals (delivered)</li>
+            <li>Tongue cleaning</li>
+          </ul>
+        </section>
         <aside class="base-padding">
           <h3>Please note:</h3>
           <p>
@@ -42,7 +45,7 @@
       </div>
     </main>
     <footer class="base-padding">
-      <div>
+      <div class="layout">
         <small>Copyright 2023 Frogs Inc.</small>
       </div>
     </footer>

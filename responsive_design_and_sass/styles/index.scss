@@ -1,3 +1,5 @@
+@import "brand";
+
 body {
   min-height: 100vh;
   display: flex;
@@ -40,20 +42,29 @@ header {
     display: none;
   }
 }
-header > div {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+
+header {
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  div {
+    height: 100%;
+  }
+
+  img {
+    height: 100%;
+  }
 }
-header div {
-  height: 100%;
-}
-header img {
-  height: 100%;
+
+@mixin background-color($mode) {
+  background-color: $mode;
 }
 
 main {
-  background-color: "light";
+  @include background-color($mode);
   flex-grow: 1;
 }
 
@@ -65,27 +76,32 @@ main {
     max-width: 200px;
   }
 }
+
 footer {
-  background-color: #68b268;
+  background-color: $frog-green;
 }
 
 .base-padding {
   padding: 1rem;
 }
 
-.auto-margin-inline, .layout, aside {
+.auto-margin-inline {
   margin-inline: auto;
 }
 
+@mixin border-curver($radius) {
+  border-radius: $radius;
+}
+
 aside {
+  @extend .auto-margin-inline;
   color: white;
-  background-color: #68b268;
+  background-color: $frog-green;
   width: 89%;
-  border-radius: 30px;
+  @include border-curver(30px);
 }
 
 .layout {
+  @extend .auto-margin-inline;
   max-width: 1200px;
 }
-
-/*# sourceMappingURL=index.css.map */
