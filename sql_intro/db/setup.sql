@@ -1,0 +1,14 @@
+DROP TABLE books;
+DROP TABLE authors;
+
+CREATE TABLE authors (
+    id INTEGER PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL
+);
+
+CREATE TABLE books (
+    id SERIAL PRIMARY KEY NOT NULL,
+    title TEXT NOT NULL,
+    year INT NOT NULL,
+    author_id INTEGER REFERENCES authors(id) ON DELETE CASCADE
+);
