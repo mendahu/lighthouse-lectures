@@ -23,6 +23,7 @@
 # Setting up the app
 
 - What's it like to clone a template and figure it out?
+  - https://github.com/lighthouse-labs/LightBnB_WebApp
 - What was challenging about taking on this existing app?
 - What are the steps you take to undertake that?
   - Package.json - scripts
@@ -40,7 +41,12 @@
 # Queries
 
 - Return promise pattern of queries
-- Examine how exploring this first pre-written query went for me
-- Spotted some weird layouts of the data (`properties` property is unnecessary)
+- Where to catch errors? In the route or the selector?
+- JSDoc?
 
 # Other questions
+
+- Storing prices in cents - good or bad?
+- User Experience - Show listing after creation
+  - Dev's job vs UX job
+- getAllProperties big where filter discussion
