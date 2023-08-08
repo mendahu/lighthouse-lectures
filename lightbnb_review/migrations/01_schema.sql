@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS properties (
   id SERIAL PRIMARY KEY,
-  owner_id INTEGER references users(id) ON DELETE CASCADE,
+  owner_id INTEGER references users(id) ON DELETE SET NULL,
   title TEXT NOT NULL,
   description TEXT NOT NULL,
   cost_per_night INTEGER NOT NULL,

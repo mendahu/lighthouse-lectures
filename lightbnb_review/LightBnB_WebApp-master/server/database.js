@@ -81,15 +81,38 @@ exports.getAllReservations = getAllReservations;
  * @return {Promise<[{}]>}  A promise to the properties.
  */
 const getAllProperties = function (options, limit = 10) {
-  return client
-    .query(
-      `
-    SELECT * FROM properties LIMIT $1
-  `,
-      [limit]
-    )
-    .then((result) => result.rows);
+  let query = `SELECT * FROM properties`;
+
+  const params = [];
+  const whereClauses = [];
+
+  if (options.city) {
+    params.push(options.city);
+    whereClauses.push(`city = $${params.length}`);
+  }
+
+  if (options.minimum_price) {
+    whereClauses.push(`price >= ${options.minimum_price}`);
+  }
+
+  if (true) {
+    // more here
+  }
+
+  if (whereClauses.length > 0) {
+    query += "WHERE ";
+    query += whereClauses.join(" AND ");
+  }
+
+  const havingClauses = [];
+
+  // HAVING
+
+  query += ` LIMIT $1`;
+
+  return client.query(query, [limit]).then((result) => result.rows);
 };
+
 exports.getAllProperties = getAllProperties;
 
 /**
@@ -103,4 +126,5 @@ const addProperty = function (property) {
   properties[propertyId] = property;
   return Promise.resolve(property);
 };
+
 exports.addProperty = addProperty;
