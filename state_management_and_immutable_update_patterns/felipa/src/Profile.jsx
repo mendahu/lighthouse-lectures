@@ -13,15 +13,23 @@ export default function Profile(props) {
       </div>
       <div className="profile-block">
         <h2>{props.name}</h2>
-        <form className="text-field-form">
-          <input type="text" placeholder="Update your name" />
-          <Button loadingText={"Updating..."}>Update</Button>
+        <form method="PUT" className="text-field-form">
+          <input type="text" name="name" placeholder="Update your name" />
+          <Button type="submit" loadingText={"Updating..."}>
+            Update
+          </Button>
         </form>
         <h3>Profile</h3>
         <p>{props.description}</p>
-        <form className="text-field-form">
-          <input type="text" placeholder="Update your profile" />
-          <Button loadingText={"Updating..."}>Update</Button>
+        <form method="PUT" className="text-field-form">
+          <input
+            type="text"
+            name="description"
+            placeholder="Update your profile"
+          />
+          <Button type="submit" loadingText={"Updating..."}>
+            Update
+          </Button>
         </form>
         <h3>Tags</h3>
         <ul>
@@ -31,9 +39,11 @@ export default function Profile(props) {
             </li>
           ))}
         </ul>
-        <form className="text-field-form">
-          <input type="text" placeholder="Add Tag" />
-          <Button loadingText={"Adding..."}>Add Tag</Button>
+        <form method="PUT" className="text-field-form">
+          <input type="text" name="tag" placeholder="Add Tag" />
+          <Button type="submit" loadingText={"Adding..."}>
+            Add Tag
+          </Button>
         </form>
       </div>
     </section>

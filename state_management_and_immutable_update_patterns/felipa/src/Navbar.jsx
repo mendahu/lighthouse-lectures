@@ -7,7 +7,11 @@ export default function Navbar(props) {
       <h1>Frog Friends</h1>
       <div>
         {props.loggedIn && <p>Logged in as {props.username}</p>}
-        {props.loggedIn ? <button>Logout</button> : <button>Login</button>}
+        {props.loggedIn ? (
+          <button onClick={props.onLogout}>Logout</button>
+        ) : (
+          <button onClick={props.onLogin}>Login</button>
+        )}
       </div>
     </header>
   );
