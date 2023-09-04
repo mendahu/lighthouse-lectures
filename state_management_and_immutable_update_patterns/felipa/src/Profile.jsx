@@ -1,4 +1,7 @@
+// Styles
 import "./Profile.css";
+
+// Components
 import Tag from "./components/Tag";
 
 export default function Profile(props) {

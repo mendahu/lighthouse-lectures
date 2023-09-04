@@ -1,5 +1,10 @@
-import { useState } from "react";
+// Styles
 import "./App.css";
+
+// Libraries
+import { useState } from "react";
+
+// Components
 import Profile from "./Profile";
 import Navbar from "./Navbar";
 import Loading from "./components/Loading";
