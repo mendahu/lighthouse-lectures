@@ -22,14 +22,6 @@ section > div {
   gap: 1rem;
 }
 
-.profile-block li {
-  background-color: #aaa;
-  color: white;
-  padding-inline: 1rem;
-  padding-block: 0.5rem;
-  border-radius: 2rem;
-}
-
 .text-field-form {
   display: flex;
   gap: 1rem;
@@ -43,11 +35,10 @@ section > div {
 }
 
 form button {
-  padding-inline: 1rem;
-  padding-block: 0.5rem;
-  border-radius: 10px;
-  box-shadow: none;
   background-color: green;
   color: white;
   text-transform: uppercase;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-color: #ddd;
 }

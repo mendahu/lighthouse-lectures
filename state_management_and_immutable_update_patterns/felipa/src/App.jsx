@@ -10,15 +10,15 @@ const defaultState = {
   logo: "frog_profile.jpg",
   tags: [
     {
-      id: 1,
+      id: "e930db",
       label: "green",
     },
     {
-      id: 2,
+      id: "82492e",
       label: "hungry",
     },
     {
-      id: 3,
+      id: "cd82dc",
       label: "happy",
     },
   ],

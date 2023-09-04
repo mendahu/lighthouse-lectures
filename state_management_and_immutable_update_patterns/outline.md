@@ -30,3 +30,5 @@
 ## Complex State Example - Felipa the Frog Revisited
 
 - Let's explore our demo app today
+- Felipa the Frog makes a comeback! And the site has gotten an update.
+- We're going to help build out a profile page that the user can edit! Let's let Felipa make some changes to her profile.

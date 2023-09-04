@@ -1,4 +1,5 @@
 import "./Profile.css";
+import Tag from "./components/Tag";
 
 export default function Profile(props) {
   return (
@@ -21,7 +22,9 @@ export default function Profile(props) {
         <h3>Tags</h3>
         <ul>
           {props.tags.map((tag) => (
-            <li key={tag.id}>{tag.label}</li>
+            <li key={tag.id}>
+              <Tag>{tag.label}</Tag>
+            </li>
           ))}
         </ul>
         <form className="text-field-form">
