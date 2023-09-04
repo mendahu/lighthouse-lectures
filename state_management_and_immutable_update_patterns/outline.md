@@ -312,3 +312,7 @@ dispatch({
 - To simulate loading, I am going to use a fake API calling function. This is a simple promise that autoresolves for us after a certain time.
 
 - update the form handlers to dispatch a loading event, call the API, wait for the response, then trigger the state change and set the loading event back
+
+## Double Bonus Time
+
+- Do the same exercise but with separate loading state in the Profile component to handle the individual loading states of each button. This can be separate from the reducer to show how they can all work together.

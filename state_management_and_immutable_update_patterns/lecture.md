@@ -7,3 +7,4 @@
 - [ ] Immutability
 - [ ] Updating complex state without mutating
 - [ ] useReducer
+- [ ] Bonus Exercises: Loading states
