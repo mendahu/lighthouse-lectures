@@ -1,0 +1,44 @@
+section {
+  background-color: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+section > div {
+  flex: 1 0 0;
+}
+
+.profile-picture > img {
+  width: 100%;
+}
+
+.profile-block ul {
+  list-style: none;
+  padding-inline-start: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.text-field-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.text-field-form input {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: green;
+  color: white;
+  text-transform: uppercase;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-color: #ddd;
+}

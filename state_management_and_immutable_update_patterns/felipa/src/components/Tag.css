@@ -1,0 +1,57 @@
+.tag {
+  background-color: #aaa;
+  color: white;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
+  border-radius: 2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag button {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 43%,
+      #fff 45%,
+      #fff 55%,
+      rgba(0, 0, 0, 0) 57%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      135deg,
+      #ccc 0%,
+      #ccc 43%,
+      #fff 45%,
+      #fff 55%,
+      #ccc 57%,
+      #ccc 100%
+    );
+}
+
+.tag button:hover {
+  cursor: pointer;
+  background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 43%,
+      #fff 45%,
+      #fff 55%,
+      rgba(0, 0, 0, 0) 57%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      135deg,
+      #aca 0%,
+      #aca 43%,
+      #fff 45%,
+      #fff 55%,
+      #aca 57%,
+      #aca 100%
+    );
+}

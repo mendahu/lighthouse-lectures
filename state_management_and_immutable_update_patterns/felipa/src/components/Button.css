@@ -1,0 +1,8 @@
+.button {
+  background-color: green;
+  color: white;
+  text-transform: uppercase;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-color: #ddd;
+}
