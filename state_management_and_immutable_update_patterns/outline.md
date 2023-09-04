@@ -28,3 +28,5 @@
 - What we're going to learn today is how to do it by hand so you can understand some of the core principles behind the process
 
 ## Complex State Example - Felipa the Frog Revisited
+
+- Let's explore our demo app today

@@ -29,3 +29,25 @@ section > div {
   padding-block: 0.5rem;
   border-radius: 2rem;
 }
+
+.text-field-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.text-field-form input {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 10px;
+  box-shadow: none;
+  background-color: green;
+  color: white;
+  text-transform: uppercase;
+}
