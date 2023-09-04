@@ -1,0 +1,20 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: green;
+  height: 50px;
+  padding-inline: 20px;
+  padding-block: 10px;
+}
+
+header h1,
+header p {
+  color: white;
+}
+
+header div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
