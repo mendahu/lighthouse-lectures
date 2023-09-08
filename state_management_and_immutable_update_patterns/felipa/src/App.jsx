@@ -122,7 +122,7 @@ function App() {
     switch (action.type) {
       case userActions.LOGIN: {
         const newUser = { ...user, loggedIn: true };
-        return newUser;
+        return newUser; // reducer must ALWAYS return the new state
       }
       case userActions.LOGOUT: {
         const newUser = { ...user, loggedIn: false };
