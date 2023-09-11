@@ -3,26 +3,26 @@
 - Abstracting logic away from presentation
 - Using a hook inside a hook
 - Reusing hooks in multiple components
--
 
 ## Blog Site
 
-- Main Articles
-- Quick Hits
-- Visited Count
+- Main Articles Data fetch plus loading/error
+- Quick Hits Data fetch plus loading/error
+- Likes/Favourites
 
-## Hooks
+## What is a Custom hook?
 
-- useLocalStorage (to store visit count)
-  - has useState
-- useFetch (to get data)
-  - Has useEffect, states, axios call
-- useLike (to toggle likes, reused in both main articles and quick hits)
-  - Restricts functionality
-- useLikePost
-  - uses useLike, has data persistence
-- useLikeHit
-  - uses useLike, has data persistence
+- Custom hooks are what they sound like - they operate the same as hooks like `useState` or `useReducer` except they are written by you and provide a custom functionality
+- Custom Hooks are a way for us to abstract and separate logic in our components that depend on other hooks to function. They're like helper functions but for hooks!
+- Custom hooks are functions which call other hooks. Otherwise it _is_ just a helper function.
+
+## Rules for Customer Hooks
+
+- must always start with a `use` in the name
+- Must be called at the root level of a component unconditionally
+- Should call other hooks inside it
+- May take in arguments
+- May return values
 
 ## Demo
 
@@ -31,47 +31,11 @@
 - Copy over jake.jpg
 - Showcase components
 
-## Visitor Count
-
-- Implement in Header using Local Storage
-
-```js
-localStorage.setItem("visitCount", 1);
-localStorage.getItem("visitCount");
-```
-
-```js
-const [count, setCount] = useState(localStorage.getItem("visitCount") || 0);
-
-useEffect(() => {
-  localStorage.setItem("visitCount", count);
-}, [count]);
-
-useEffect(() => {
-  setCount(Number(count) + 1);
-}, []);
-```
-
-- all accomplished without custom hooks
-- but we could abstract some of this away for reusability purposes and cleanliness
-- what we've actually done here is create a simple synchronizer between state and localstorage. That sounds super useful in other places.
-- let's refactor
-
-```js
-const useLocalStorage = (key, initialValue) => {
-  const [state, setState] = useState(localStorage.getItem(key) || initialValue);
-
-  useEffect(() => {
-    localStorage.setItem(key, state);
-  }, [state, key]);
-
-  return [state, setState];
-};
-```
-
 ## Data Fetching
 
 - set up proxy (https://localhost:8080)
+
+- build this inside of `App.js`
 
 ```jsx
 const [posts, setPosts] = useState([]);
@@ -166,21 +130,3 @@ const useToggle = () => {
 ```
 
 - add to hits as well
-
-## UsePersistentToggle
-
-```jsx
-const usePersistentToggle = (key, initialValue) => {
-  const [state, setState] = useLocalStorage(key, initialValue);
-
-  const toggleState = () => {
-    setState(state === "true" ? "false" : "true");
-  };
-
-  return [Boolean(state === "true"), toggleState];
-};
-```
-
-can do hooks inside hooks!
-
-- do for hits too
