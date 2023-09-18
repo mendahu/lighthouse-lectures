@@ -50,7 +50,7 @@ class LighthouseStudent extends LighthouseUser {
   }
 }
 
-const student = new LighthouseStudent("Duck", "flex-22-may-16-day");
+const student = new LighthouseStudent("Duck", "flex-23-may-15-day");
 student.printName();
 student.completeProject();
 student.completeProject();
@@ -74,6 +74,7 @@ const jake = new LighthouseInstructor("Jake");
 jake.printName();
 jake.addCohort("flex-22-may-16-day");
 jake.addCohort("flex-22-nov-14-day");
+jake.addCohort("flex-23-may-15-day");
 ```
 
 ## Class-based Components
@@ -228,14 +229,17 @@ document.title = this.state.name;
     clearInterval(this.state.interval);
     this.setState({ ...this.state, interval: null });
   };
-    cycleFrogs() {
+
+  cycleFrogs() {
     const interval = setInterval(() => {
       this.fetchFrog();
     }, 1000);
     this.setState({ ...this.state, interval });
   }
-        cleanup={this.clearFrogFetchInterval}
-          componentWillUnmount() {
+
+  cleanup={this.clearFrogFetchInterval}
+
+  componentWillUnmount() {
     console.log("Unmounting FrogCard")
     this.props.cleanup();
   }
