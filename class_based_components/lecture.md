@@ -10,3 +10,14 @@ _A blast from the past!_
 [ ] `this`
 [ ] Lifecycle Methods
 [ ] Comparisons to Functional Components
+
+## Class-based components
+
+- Before there were functional components, React was artchitected with Classes
+- React 16.8 introduced functional components
+
+* Class based components today are considered deprecated
+
+### Intro to Class-based
+
+RETURN AT :12 past the hour
