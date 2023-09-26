@@ -1,0 +1,42 @@
+body {
+  background-color: #080f0f;
+  color: white;
+  padding: 1rem;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background-color: #586f7c;
+  border-radius: 1rem;
+  box-shadow: rgba(198, 202, 206, 0.2) 0px 8px 24px;
+}
+
+.card-selected {
+  background-color: #6a828f;
+}
+
+header {
+  padding: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+main > div:first-child {
+  flex-basis: 40%;
+  flex-grow: 0;
+}
+
+main > div:nth-child(2) {
+  flex-basis: 60%;
+  flex-grow: 0;
+}

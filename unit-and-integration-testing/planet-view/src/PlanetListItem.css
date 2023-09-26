@@ -1,0 +1,24 @@
+article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100px;
+  overflow: hidden;
+  gap: 1rem;
+}
+
+article div:first-child {
+  flex-basis: 100px;
+  flex-grow: 0;
+}
+
+article img {
+  width: 100px;
+  aspect-ratio: 1;
+}
+
+article div:nth-child(2) {
+  flex-basis: 100%;
+  flex-grow: 1;
+  font-size: 1.4rem;
+}
