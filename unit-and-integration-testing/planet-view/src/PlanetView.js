@@ -1,6 +1,14 @@
+import React from "react";
 import "./PlanetView.css";
 
 export const PlanetView = (props) => {
+  if (!props.planet) {
+    return (
+      <aside className="card">
+        <h2>Click any planet to learn more!</h2>
+      </aside>
+    );
+  }
   return (
     <aside className="card">
       <div>
@@ -22,7 +30,7 @@ export const PlanetView = (props) => {
         <h3>Moons</h3>
         <ul>
           {props.planet.moons.map((m) => {
-            return <li>{m}</li>;
+            return <li key={m}>{m}</li>;
           })}
         </ul>
       </div>

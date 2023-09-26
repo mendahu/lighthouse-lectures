@@ -4,5 +4,5 @@
 - [ ] How to select test types
 - [ ] Testing Tools in React
 - [ ] Mocking
-- [ ] Coverage Reports
 - [ ] Asynchronous Testing
+- [ ] Coverage Reports

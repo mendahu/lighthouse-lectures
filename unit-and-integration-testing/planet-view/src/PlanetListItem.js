@@ -1,4 +1,5 @@
 import "./PlanetListItem.css";
+import React from "react";
 
 export const PlanetListItem = (props) => {
   const classes = ["card"];
@@ -8,7 +9,7 @@ export const PlanetListItem = (props) => {
   }
 
   return (
-    <article className={classes.join(" ")}>
+    <article className={classes.join(" ")} onClick={props.handleClick}>
       <div>
         <img src={props.image} alt={props.name} />
       </div>

@@ -1,6 +1,6 @@
 import "./App.css";
-import { PlanetList } from "./PlanetList";
-import { PlanetView } from "./PlanetView";
+import { Main } from "./Main";
+import React from "react";
 
 const planets = [
   {
@@ -42,14 +42,7 @@ function App() {
         <h1>PlanetView</h1>
       </header>
 
-      <main>
-        <div>
-          <PlanetList planets={planets} />
-        </div>
-        <div>
-          <PlanetView planet={planets[0]} />
-        </div>
-      </main>
+      <Main planets={planets} />
     </>
   );
 }
