@@ -515,3 +515,11 @@ useEffect(() => {
 
 - Test passes, and we can also fire up the app to see the real data coming through.
 - Verify that mock is being used and not real data
+
+## Test Coverage
+
+- One last feature we'll talk about today is test coverage
+- Jest offers a feature to show a metric called code coverage, which helps you show branches in your logic that aren't tested by any of your tests
+- Code Coverage is a tricky bit - it's great because it can expose parts of your logic you forgot to test, but it's dangerous because it can trick you into thinking you're not doing enough
+- The truth is, 100% code coverage is not an ideal goal. As we mentioned at the beginning, there are diminishing marginal returns on tests
+- You will learn through experience tobe smart about your testing and to target the highest value things first. This may mean you only get to 80 or 90% coverage. You could even have a valid period where you're much lower than that as you build out tests.
