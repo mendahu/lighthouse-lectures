@@ -51,6 +51,13 @@ app.get("/api/users/:id/pets", (req, res) => {
   });
 });
 
+app.get("/api/pets", (req, res) => {
+  return res.json({
+    success: true,
+    data: pets,
+  });
+});
+
 app.get("/api/pets/:id", (req, res) => {
   const stringId = req.params.id;
   const id = parseInt(stringId);
