@@ -27,6 +27,11 @@ header li {
   border-radius: 1rem;
 }
 
+header li a {
+  color: white;
+  text-decoration: none;
+}
+
 header li:hover {
   background-color: white;
   color: black;
