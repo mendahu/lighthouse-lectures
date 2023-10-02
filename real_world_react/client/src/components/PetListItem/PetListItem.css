@@ -1,0 +1,10 @@
+.pet-list-item {
+  display: flex;
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.pet-list-item img {
+  width: 100px;
+}
