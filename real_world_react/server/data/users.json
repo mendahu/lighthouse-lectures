@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "Jake Robins",
+    "email": "me@jakerobins.com",
+    "profile_image": "/users/jake.jpg",
+    "city": "Tamanche",
+    "state": "Yucatán",
+    "country": "Mexico"
+  }
+]
