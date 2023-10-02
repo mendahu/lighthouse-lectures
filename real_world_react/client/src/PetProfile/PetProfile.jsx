@@ -1,15 +1,21 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "../Main/Main.css";
+import Cookies from "js-cookie";
 
 export const PetProfile = () => {
   const [pets, setPets] = useState([]);
 
+  const user_id = Cookies.get("user_id");
+
   useEffect(() => {
-    axios.get("/api/users/1/pets").then((res) => {
+    if (!user_id) {
+      return;
+    }
+    axios.get(`/api/users/${user_id}/pets`).then((res) => {
       setPets(res.data.data);
     });
-  }, []);
+  }, [user_id]);
 
   const pet = pets[0];
 
