@@ -27,7 +27,7 @@ export const Main = () => {
       return;
     }
 
-    axios.get("/api/users/1/pets").then((res) => {
+    axios.get("/api/pets").then((res) => {
       setPets(res.data.data);
     });
   }, [userId]);

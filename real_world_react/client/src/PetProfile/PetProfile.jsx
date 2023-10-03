@@ -12,7 +12,7 @@ export const PetProfile = () => {
     if (!user_id) {
       return;
     }
-    axios.get(`/api/users/${user_id}/pets`).then((res) => {
+    axios.get(`/api/pets`).then((res) => {
       setPets(res.data.data);
     });
   }, [user_id]);
