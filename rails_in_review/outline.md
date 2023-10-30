@@ -93,4 +93,8 @@
   - Template vars come from Controller
 - built in Rails functions to make your life easier
 - Forms are especially nice
+
   - Helper functions eliminate tedious code, connect to models, and more
+
+- Concurrency
+-
