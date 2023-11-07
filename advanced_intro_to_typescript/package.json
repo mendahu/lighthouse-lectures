@@ -2,11 +2,18 @@
   "name": "advanced_intro_to_typescript",
   "version": "1.0.0",
   "description": "",
-  "main": "why_typescript.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "tsc",
+    "clear": "rm -rf dist",
+    "start": "npm run clear && npm run compile && node dist/index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.3",
+    "@types/node": "^20.8.10",
+    "typescript": "^5.2.2"
+  }
 }
