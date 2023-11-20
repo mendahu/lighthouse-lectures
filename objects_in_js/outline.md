@@ -22,8 +22,8 @@
 - Since we have to work with so much data, all programming languages including JS have a way to store it. Let's review how that works
 
 ```js
-const name = "Jake";
-console.log(name);
+const myName = "Jake";
+console.log(myName);
 ```
 
 - Review: keyword `const`, variable name, data
@@ -41,7 +41,16 @@ console.log(name);
   - String
   - Symbol
 
-* Primitives are immutable (do a let example)
+* Primitives are immutable (do a mutability example and a let example)
+
+```js
+let myName = "Jake";
+myName[0] = "R";
+console.log(myName); // Jake
+
+myName = "Rake";
+console.log(myName); // Rake
+```
 
 # Objects
 
@@ -49,7 +58,7 @@ console.log(name);
   - Use name (string), age (number), isInstructor (boolean) examples
 
 ```js
-// const name = "Jake"
+// const myName = "Jake"
 // const age = 38
 // const isInstructor = true;
 
