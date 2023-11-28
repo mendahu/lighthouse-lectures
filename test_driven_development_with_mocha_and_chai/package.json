@@ -1,0 +1,15 @@
+{
+  "name": "test_driven_development_with_mocha_and_chai",
+  "version": "1.0.0",
+  "description": "My testing app!!1",
+  "main": "index.js",
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  },
+  "scripts": {
+    "test": "mocha --recursive './src/**/*/test/*.js'"
+  },
+  "author": "",
+  "license": "ISC"
+}
