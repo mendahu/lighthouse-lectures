@@ -2,6 +2,24 @@
 
 ## Review Networking
 
+### HTTP REVIEW
+
+(since we missed it!)
+
+- **H**yper**T**ext **T**ransfer **P**rotocol
+- With our TCP client/server, we were just sending unformatted raw buffers, basically strings.
+- We didn't provide any kind of structure to that or standard
+- On top of TCP we can add this structure by adhering to a protocal called HTTP
+- HTTP defines how we transmit data over TCP and what data is in it and in what shape
+- Call and response communication
+- _State-less_: no memory of any previous communication
+- Routes to resources are made up of methods (verbs) and paths
+- **METHODS**: GET, POST, PUT, PATCH, DELETE
+- **PATHS**: `/users`, `/unicorns/123`
+- Returns status codes for each communication (eg. 200, 202, 302, 404, 500)
+- Response headers contain information about the response such as media type and content size
+- Reponse body contains the content (JSON, html, etc)
+
 - We talked last about:
   - Networking layers - IP, TCP/UDP
   - Made a TCP Chat application
@@ -16,6 +34,7 @@
 - When we build a web server, we're going to need more features, like cookies, authentication, a way to organize data in a request, such as url, path, port, type of request, request body and parameters
 - We need a way for a server to make useful responses with similar information, including files
 - HTTP builds on top of TCP and with it, we will be able to make our very first web server
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages
 
 ## What is a Web Server
 
