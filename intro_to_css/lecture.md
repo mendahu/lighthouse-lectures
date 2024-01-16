@@ -16,3 +16,5 @@
 - [ ] CSS Resets/Normalize
 - [ ] Specificity
 - [ ] Demo this week's project
+
+:02

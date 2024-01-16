@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 30px;
+}
+
+article {
+  background-color: #ccefc5;
+  border: solid black 1px;
+  box-shadow: 4px 4px 4px lightgrey;
+  width: 800px;
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+article > section > h2 {
+  margin-top: 0px;
+}
+
+p,
+h1,
+h2,
+h3,
+small,
+li,
+a {
+  font-family: "Arial";
+  color: #222222;
+}
+
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18px;
+}
+p,
+li {
+  font-size: 16px;
+}
+small {
+  font-size: 12px;
+}
+
+ul {
+  padding-inline-start: 16px;
+}
+
+li {
+  padding-left: 10px;
+}
+
+.taglist {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tag {
+  background-color: #8c8c8c;
+  border-radius: 20px;
+  color: #eeeeee;
+  padding: 12px 24px;
+}
+
+#profile-picture {
+  border-radius: 48px;
+  width: 100%;
+}
+
+footer {
+  margin-top: 40px;
+}
