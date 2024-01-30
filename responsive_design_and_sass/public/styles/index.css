@@ -1,0 +1,109 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+em {
+  font-size: 1.2em;
+}
+
+p,
+li,
+a,
+button,
+input,
+label {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header {
+  height: 60px;
+  background-color: rgb(248, 255, 246);
+  text-transform: uppercase;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.full-height, header img, header div {
+  height: 100%;
+}
+
+main {
+  background-color: lightgray;
+}
+main > div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: lightgreen;
+}
+
+.base-padding {
+  padding: 1rem;
+}
+
+aside {
+  color: white;
+  background-color: grey;
+  width: 85%;
+  margin-inline: auto;
+  border-radius: 8px;
+}
+
+.layout {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  header p {
+    display: none;
+  }
+}
+@media only screen and (min-width: 650px) {
+  main > div {
+    flex-direction: row;
+  }
+  aside {
+    max-width: 250px;
+  }
+}
+.square-card {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+/*# sourceMappingURL=index.css.map */

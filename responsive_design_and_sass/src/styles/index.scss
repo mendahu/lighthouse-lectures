@@ -1,0 +1,129 @@
+@import "theme";
+
+html {
+  font-size: $root-font-size;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+em {
+  font-size: 1.2em;
+}
+
+p,
+li,
+a,
+button,
+input,
+label {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header {
+  height: 60px;
+  background-color: $white;
+  text-transform: uppercase;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.full-height {
+  height: 100%;
+}
+
+header div {
+  @extend .full-height;
+}
+
+header img {
+  @extend .full-height;
+}
+
+main {
+  background-color: $gray1;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+footer {
+  background-color: $frog-green;
+}
+
+.base-padding {
+  padding: 1rem;
+}
+
+aside {
+  color: white;
+  background-color: $gray2;
+  width: 85%;
+  margin-inline: auto;
+  border-radius: 8px;
+}
+
+.layout {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  header p {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  main > div {
+    flex-direction: row;
+  }
+
+  aside {
+    max-width: 250px;
+  }
+}
+
+@mixin square($n) {
+  height: $n;
+  width: $n;
+}
+
+@mixin circle($n) {
+  @include square($n);
+  border-radius: 50%;
+}
+
+.square-card {
+  @include circle(250px);
+  background-color: red;
+}
