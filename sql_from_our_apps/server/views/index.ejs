@@ -9,11 +9,52 @@
       integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="index.js" defer></script> -->
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="index.css" />
     <title>Astrostatus</title>
   </head>
   <body>
     <h1>Welcome to Astrostatus!</h1>
+    <p>Learn who is in space!</p>
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Agency</th>
+        <th>Destination</th>
+        <th>Move Astronaut</th>
+      </thead>
+      <tbody>
+        <% for (const a of astronauts) { %>
+        <tr>
+          <td><%= a.name %></td>
+          <td><%= a.agency %></td>
+          <td><%= a.destination %></td>
+          <td>
+            <form action="/astronauts/<%= a.id %>" method="POST">
+              <button>Send to:</button>
+              <input name="destination" />
+            </form>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+
+    <h2>Send astronaut to space!</h2>
+    <form>
+      <label for="name">Name</label>
+      <input name="name" />
+      <label for="agency_id">Agency</label>
+      <!-- <input name="agency" /> -->
+      <select name="agency_id">
+        <% for (const agency of agencies) { %>
+        <option value="<%= agency.id %>"><%= agency.name %></option>
+        <% } %>
+      </select>
+
+      <label for="destination">Destination</label>
+      <input name="destination" />
+      <button type="submit">Send to space!</button>
+    </form>
   </body>
 </html>
