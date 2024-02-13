@@ -7,13 +7,13 @@ INSERT INTO agencies (id, name, founded) VALUES
   (6, 'JAXA', 2003);
 
 INSERT INTO astronauts (name, destination, agency_id) VALUES
-  ('Francisco Rubio', 'ISS', 1),
-  ('Nicole Mann', 'ISS', 1),
-  ('Josh Cassada', 'ISS', 1),
-  ('Koichi Wakata', 'ISS', 6),
-  ('Sergey Prokopyev', 'ISS', 4),
-  ('Dmitry Petelin', 'ISS', 4),
-  ('Anna Kikina', 'ISS', 4),
-  ('Fei Junlong', 'Tiangong', 5),
-  ('Deng Qingming', 'Tiangong', 5),
-  ('Zhang Lu', 'Tiangong', 5);
+  ('Jasmin Moghbeli', 'ISS', 1),
+  ('Andres Mogensen', 'ISS', 2),
+  ('Satoshi Furukawa', 'ISS', 6),
+  ('Konstantin Borisov', 'ISS', 4),
+  ('Oleg Kononenko', 'ISS', 4),
+  ('Nikolai Chub', 'ISS', 4),
+  ('Loral O''Hara', 'ISS', 1),
+  ('Tang Hongbo', 'Tiangong', 5),
+  ('Tang Shengjie', 'Tiangong', 5),
+  ('Jiang Zinlin', 'Tiangong', 5);
