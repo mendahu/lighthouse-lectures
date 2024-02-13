@@ -3,13 +3,13 @@ DROP TABLE IF EXISTS agencies;
 
 CREATE TABLE IF NOT EXISTS agencies (
   id INTEGER PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
+  name TEXT NOT NULL,
   founded INTEGER NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS astronauts (
-  id serial PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
-  destination VARCHAR(255),
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  destination TEXT,
   agency_id INTEGER REFERENCES agencies(id) ON DELETE CASCADE
 );

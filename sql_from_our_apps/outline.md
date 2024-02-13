@@ -139,6 +139,29 @@ const config = {
 
 - Let's connect our front page view to a simple select statement
 - Show pre-made view
+
+#### Add to front end
+
+```html
+<p>Learn who is in space!</p>
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Agency</th>
+    <th>Destination</th>
+  </thead>
+  <tbody>
+    <% for (const a of astronauts) { %>
+    <tr>
+      <td><%= a.name %></td>
+      <td><%= a.agency %></td>
+      <td><%= a.destination %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
+```
+
 - Setup route to render the view with some sample data
 
 ```js
@@ -246,7 +269,7 @@ const getAllAstronauts = () => {
 
 ```html
 <td>
-  <form action="/astronauts/<%= a.id %>/update" method="POST">
+  <form action="/astronauts/<%= a.id %>" method="POST">
     <button type="submit">Send to:</button>
     <input name="destination" />
   </form>
@@ -262,6 +285,23 @@ const updateAstronautDestination = (id, destination) => {
     `UPDATE astronauts SET destination = '${destination}' WHERE id = '${id}'`
   );
 };
+```
+
+- Route handler
+
+```js
+app.post("/astronauts/:id", (req, res) => {
+  const { id } = req.params;
+  const { destination } = req.body;
+  updateAstronautDestination(id, destination)
+    .then((response) => {
+      res.redirect("/");
+    })
+    .catch((err) => {
+      console.error(err);
+      res.redirect("/");
+    });
+});
 ```
 
 - Review path of requests from client to server
