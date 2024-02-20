@@ -81,10 +81,32 @@ exports.getAllReservations = getAllReservations;
  * @return {Promise<[{}]>}  A promise to the properties.
  */
 const getAllProperties = function (options, limit = 10) {
+  const hasFilters = false;
+
+  if () {
+    //enumerate the filters and if any are true, turn to true) {
+  }
+
+  let whereClause = "WHERE "
+
+  const clauses = [
+    "properties.min_price > 10",
+    "properties.max_price < 200",
+  ]
+
+  whereClause = whereClause + clauses.join(" AND ")
+
   return client
     .query(
       `
     SELECT * FROM properties LIMIT $1
+      
+      AND properties.max_pirce < 200
+      AND properties.max_pirce < 200
+      AND properties.max_pirce < 200
+      AND properties.max_pirce < 200
+      AND properties.max_pirce < 200
+
   `,
       [limit]
     )
