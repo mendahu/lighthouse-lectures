@@ -1,4 +1,4 @@
-# React Fundamentals
+# JSX and Props
 
 - [ ] Midterm Debrief and Problem Context
 - [ ] What is React?
