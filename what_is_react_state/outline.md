@@ -100,3 +100,7 @@ const handleUpdateName = (e) => {
 - What is the benefit of deriving it?
 - Do deriviate calcs an insert into new chart
 - Test adjustments
+
+## Look for Refactoring Opportunities
+
+- Config file for fruit with masses and images and alt text, etc?

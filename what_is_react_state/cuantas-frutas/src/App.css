@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+/* Core Styles */
+
 body {
   background-color: hsl(20, 70%, 80%);
 }
@@ -20,37 +22,6 @@ input {
   font-family: "Nanum Gothic Coding", monospace;
   font-weight: 400;
   font-style: normal;
-}
-
-header > h1 {
-  font-size: 3rem;
-  text-align: center;
-}
-
-.row {
-  display: flex;
-  gap: 1rem;
-}
-
-.row-center {
-  justify-content: center;
-}
-
-.row-item-grow * {
-  flex-grow: 1;
-}
-
-.card {
-  border: 5px solid hsl(80, 90%, 30%);
-  border-radius: 0.5rem;
-  padding: 1rem;
-}
-
-.flow > * + * {
-  margin-top: 1rem;
-}
-.flow-inline > * + * {
-  margin-left: 1rem;
 }
 
 button {
@@ -77,4 +48,39 @@ input {
   border: 3px solid hsl(310, 60%, 50%);
   border-radius: 0.5rem;
   box-shadow: 1px 1px 2px 0px hsl(310, 60%, 30%);
+}
+
+/* Utilities */
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.row-center {
+  justify-content: center;
+}
+
+.row-item-grow * {
+  flex-grow: 1;
+}
+
+.flow > * + * {
+  margin-top: 1rem;
+}
+
+/* Blocks */
+
+.card {
+  border: 5px solid hsl(80, 90%, 30%);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+/* Exceptions */
+
+/* Big Title */
+header > h1 {
+  font-size: 3rem;
+  text-align: center;
 }
