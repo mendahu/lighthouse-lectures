@@ -30,6 +30,10 @@ header > h1 {
   gap: 1rem;
 }
 
+.row-center {
+  justify-content: center;
+}
+
 .row-item-grow {
   flex-grow: 1;
 }
@@ -42,4 +46,22 @@ header > h1 {
 
 .flow * + * {
   margin-top: 1rem;
+}
+
+button {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border: 3px solid hsl(310, 60%, 50%);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 2px 0px hsl(310, 60%, 30%);
+}
+
+button:hover {
+  background-color: hsl(310, 60%, 50%);
+  color: white;
+}
+
+button:active {
+  background-color: hsl(310, 60%, 45%);
+  box-shadow: none;
 }

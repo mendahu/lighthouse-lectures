@@ -1,6 +1,6 @@
 import "./App.css";
 import { FruitCard } from "./components/FruitCard";
-import { FruitStats } from "./components/Stats";
+import { FruitStats } from "./components/FruitStats";
 
 function App() {
   return (
@@ -10,14 +10,16 @@ function App() {
       </header>
       <main>
         <section>
-          <h2>Stats</h2>
-          <FruitStats />
-        </section>
-        <section>
           <h2>Individual Fruits</h2>
-          <div class="row">
+          <div className="row">
             <FruitCard />
           </div>
+        </section>
+        <section>
+          <h2>
+            Stats <button>Show Stats</button>
+          </h2>
+          <FruitStats />
         </section>
       </main>
     </>
