@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(20, 70%, 80%);
+}
+
+p,
+li,
+blockquote,
+a,
+span,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header > h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.row-item-grow {
+  flex-grow: 1;
+}
+
+.card {
+  border: 5px solid hsl(80, 90%, 30%);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.flow * + * {
+  margin-top: 1rem;
+}
