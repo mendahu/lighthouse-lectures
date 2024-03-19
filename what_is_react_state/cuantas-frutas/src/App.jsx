@@ -11,7 +11,9 @@ function App() {
       <main>
         <section>
           <h2>Individual Fruits</h2>
-          <div className="row">
+          <div className="row row-item-grow">
+            <FruitCard />
+            <FruitCard />
             <FruitCard />
           </div>
         </section>

@@ -14,7 +14,9 @@ span,
 h1,
 h2,
 h3,
-h4 {
+h4,
+button,
+input {
   font-family: "Nanum Gothic Coding", monospace;
   font-weight: 400;
   font-style: normal;
@@ -34,7 +36,7 @@ header > h1 {
   justify-content: center;
 }
 
-.row-item-grow {
+.row-item-grow * {
   flex-grow: 1;
 }
 
@@ -44,8 +46,11 @@ header > h1 {
   padding: 1rem;
 }
 
-.flow * + * {
+.flow > * + * {
   margin-top: 1rem;
+}
+.flow-inline > * + * {
+  margin-left: 1rem;
 }
 
 button {
@@ -64,4 +69,12 @@ button:hover {
 button:active {
   background-color: hsl(310, 60%, 45%);
   box-shadow: none;
+}
+
+input {
+  padding-inline: 0.5rem;
+  padding-block: 0.5rem;
+  border: 3px solid hsl(310, 60%, 50%);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 2px 0px hsl(310, 60%, 30%);
 }
