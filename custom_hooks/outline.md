@@ -130,3 +130,45 @@ const useToggle = () => {
 ```
 
 - add to hits as well
+
+## Bonus - optimistic updating likes with server call
+
+- let's persist the likes and build in an optimistic update
+
+1. Add server call to toggle
+   urls are `/posts/likes/:id` and `/hits/likes/:id`
+
+```jsx
+const useToggle = (url) => {
+  const [state, setState] = useState(false);
+
+  const toggleState = () => {
+    axios.post(url).then(() => {
+      setState(!state);
+    });
+  };
+
+  return [state, toggleState];
+};
+```
+
+- this is slow, so let's do an optimistic update.
+- we're going to change the state immediately, we'll make the assumption it works
+- then we'll make the api call
+- if it fails (and only if), we'll set the state back to what it was before
+- test with `?error=true` on url
+
+```jsx
+const useToggle = (url) => {
+  const [state, setState] = useState(false);
+
+  const toggleState = () => {
+    setState((prev) => !prev);
+    axios.post(url).catch(() => {
+      setState((prev) => !prev);
+    });
+  };
+
+  return [state, toggleState];
+};
+```
