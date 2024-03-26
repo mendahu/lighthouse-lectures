@@ -25,6 +25,22 @@ app.get("/hits", (req, res) => {
   }, delay);
 });
 
+app.post("/posts/favourites/:id", (req, res) => {
+  if (req.query.error) {
+    return res.status(500).json({ error: "Server error" });
+  }
+
+  res.status(200).json({ success: true });
+});
+
+app.post("/hits/likes/:id", (req, res) => {
+  if (req.query.error) {
+    return res.status(500).json({ error: "Server error" });
+  }
+
+  res.status(200).json({ success: true });
+});
+
 app.listen(8080, () => {
   console.log("Listening on port 8080");
 });

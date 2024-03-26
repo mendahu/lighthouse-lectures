@@ -1,4 +1,4 @@
-import Heart from "./Heart";
+import Favourite from "./Favourite";
 import "./Post.css";
 
 const Post = (props) => {
@@ -21,7 +21,7 @@ const Post = (props) => {
         <p>{props.content}</p>
       </div>
       <div>
-        <Heart />
+        <Favourite />
       </div>
     </article>
   );
