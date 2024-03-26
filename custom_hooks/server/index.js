@@ -25,7 +25,7 @@ app.get("/hits", (req, res) => {
   }, delay);
 });
 
-app.post("/posts/likes/:id", (req, res) => {
+app.post("/posts/favourites/:id", (req, res) => {
   if (req.query.error) {
     return res.status(500).json({ error: "Server error" });
   }
