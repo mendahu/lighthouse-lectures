@@ -13,6 +13,9 @@ const Heart = (props) => {
       viewBox="0 0 230 230"
       style={{ fill: props.liked ? "red" : "grey" }}
       xmlSpace="preserve"
+      onClick={props.onClick}
+      stroke="pink"
+      strokeWidth={10}
     >
       <path
         d="M213.588,120.982L115,213.445l-98.588-92.463C-6.537,96.466-5.26,57.99,19.248,35.047l2.227-2.083
