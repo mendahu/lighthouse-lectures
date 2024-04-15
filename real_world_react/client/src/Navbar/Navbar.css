@@ -1,0 +1,58 @@
+.app-logo {
+  font-size: 2rem;
+}
+
+header {
+  display: flex;
+  padding: 1rem;
+  background-color: blueviolet;
+  align-items: center;
+  color: white;
+  gap: 1rem;
+}
+
+header nav {
+  flex-grow: 1;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+header li {
+  border: 1px solid white;
+  padding-inline: 1.2rem;
+  padding-block: 0.6rem;
+  border-radius: 1rem;
+}
+
+header li a {
+  color: white;
+  text-decoration: none;
+}
+
+header li:hover {
+  background-color: white;
+  color: black;
+}
+
+header button {
+  background-color: white;
+  color: black;
+  padding-inline: 1.2rem;
+  padding-block: 0.6rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+header button:hover {
+  background-color: grey;
+  color: white;
+}
+
+.login-bar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
