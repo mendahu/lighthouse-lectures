@@ -1,12 +1,28 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Navbar.css";
 import Cookies from "js-cookie";
-import { Link } from "react-router-dom";
-import { UserContext } from "../contexts/user";
 
 export const Navbar = () => {
-  const { user, logout } = useContext(UserContext);
+  const [user, setUser] = useState(null);
+
+  const user_id = Cookies.get("user_id");
+
+  useEffect(() => {
+    if (!user_id) {
+      return;
+    }
+
+    axios.get(`/api/users/${user_id}`).then((res) => {
+      setUser(res.data.data);
+    });
+  }, [user_id]);
+
+  const handleLogout = () => {
+    axios.post("/api/logout").then((res) => {
+      setUser(null);
+    });
+  };
 
   return (
     <header>
@@ -14,15 +30,13 @@ export const Navbar = () => {
       <h1>Pet Profile</h1>
       <nav>
         <ul>
-          <li>
-            <Link to="/">Profile</Link>
-          </li>
+          <li>Profile</li>
         </ul>
       </nav>
       <div className="login-bar">
         {user && <span>Logged in as: {user.name}</span>}
         {user ? (
-          <button onClick={logout}>Logout</button>
+          <button onClick={handleLogout}>Logout</button>
         ) : (
           <button>Login</button>
         )}

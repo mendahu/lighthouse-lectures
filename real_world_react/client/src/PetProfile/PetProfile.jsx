@@ -1,18 +1,23 @@
 import axios from "axios";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../Main/Main.css";
 import Cookies from "js-cookie";
-import { useParams } from "react-router-dom";
-import { PetsContext } from "../contexts/pets";
-
-const getPetById = (pets, id) => {
-  return pets.find((pet) => pet.id === parseInt(id));
-};
 
 export const PetProfile = () => {
-  const { petId } = useParams();
-  const pets = useContext(PetsContext);
-  const pet = getPetById(pets, petId);
+  const [pets, setPets] = useState([]);
+
+  const user_id = Cookies.get("user_id");
+
+  useEffect(() => {
+    if (!user_id) {
+      return;
+    }
+    axios.get(`/api/pets`).then((res) => {
+      setPets(res.data.data);
+    });
+  }, [user_id]);
+
+  const pet = pets[1];
 
   return (
     <main className="main">
