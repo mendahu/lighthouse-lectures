@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "user_id": 1,
+    "name": "Captain Morgan",
+    "yob": 2004,
+    "breed": "Grey Tabby",
+    "image": "/pets/captainmorgan.jpg",
+    "yod": 2018
+  },
+  {
+    "id": 2,
+    "user_id": 1,
+    "name": "The First Mate, Calico Charlie",
+    "yob": 2006,
+    "breed": "Calico",
+    "image": "/pets/calicocharlie.jpg",
+    "yod": 2019
+  },
+  {
+    "id": 3,
+    "user_id": 1,
+    "name": "Admiral Fitzwallace",
+    "yob": 2011,
+    "breed": "Tuxedo",
+    "image": "/pets/admiralfitzwallace.jpg",
+    "yod": null
+  },
+  {
+    "id": 4,
+    "user_id": 1,
+    "name": "Petty Officer Juno",
+    "yob": 2018,
+    "breed": "Tuxedo",
+    "image": "/pets/pettyofficerjuno.jpg",
+    "yod": null
+  }
+]
