@@ -1,17 +1,17 @@
-import { Main } from "./Main/Main";
 import { Navbar } from "./Navbar/Navbar";
 import "./App.css";
-import { PetProfile } from "./PetProfile/PetProfile";
-import { SignIn } from "./SignIn/SignIn";
+import { Outlet } from "react-router-dom";
+import { PetsProvider } from "./contexts/petsContext";
+import { UserProvider } from "./contexts/userContext";
 
 function App() {
   return (
-    <>
+    <UserProvider>
       <Navbar />
-      {/* <Main /> */}
-      <PetProfile />
-      {/* <SignIn /> */}
-    </>
+      <PetsProvider>
+        <Outlet />
+      </PetsProvider>
+    </UserProvider>
   );
 }
 

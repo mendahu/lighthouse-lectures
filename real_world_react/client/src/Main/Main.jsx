@@ -1,36 +1,13 @@
-import { useEffect, useState } from "react";
 import "./Main.css";
-import axios from "axios";
 import { PetListItem } from "../components/PetListItem/PetListItem";
-import Cookies from "js-cookie";
+import { Link } from "react-router-dom";
+import { usePets } from "../contexts/petsContext";
+import { useUser } from "../contexts/userContext";
 
 export const Main = () => {
-  const [user, setUser] = useState(null);
-  const [pets, setPets] = useState([]);
+  const pets = usePets();
+  const { user } = useUser();
 
-  const user_id = Cookies.get("user_id");
-
-  useEffect(() => {
-    if (!user_id) {
-      return;
-    }
-
-    axios.get(`/api/users/${user_id}`).then((res) => {
-      setUser(res.data.data);
-    });
-  }, [user_id]);
-
-  const userId = user && user.id;
-
-  useEffect(() => {
-    if (!userId) {
-      return;
-    }
-
-    axios.get("/api/pets").then((res) => {
-      setPets(res.data.data);
-    });
-  }, [userId]);
   return (
     <>
       <main className="main">
@@ -40,6 +17,7 @@ export const Main = () => {
             {user
               ? "Welcome to the Pet Profile App!"
               : "Please login to continue!"}
+            {!user && <Link to="/signin">Login</Link>}
           </p>
           {user && (
             <>

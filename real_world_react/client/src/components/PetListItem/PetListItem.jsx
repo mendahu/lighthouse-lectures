@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import "./PetListItem.css";
 
 export const PetListItem = (props) => {
-  return (
+  const children = (
     <li className="pet-list-item">
       <div>
         <img src={props.image} alt={props.name} />
@@ -11,4 +12,6 @@ export const PetListItem = (props) => {
       </div>
     </li>
   );
+
+  return <Link to={`/pets/${props.id}`}>{children}</Link>;
 };

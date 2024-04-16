@@ -1,7 +1,11 @@
-import axios from "axios";
 import "./SignIn.css";
+import { useNavigate } from "react-router-dom";
+import { useUser } from "../contexts/userContext";
 
 export const SignIn = () => {
+  const navigate = useNavigate();
+  const { login } = useUser();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = new FormData(event.target);
@@ -12,13 +16,9 @@ export const SignIn = () => {
       return;
     }
 
-    axios
-      .post("/api/login", {
-        email: form.get("email"),
-        password: form.get("password"),
-      })
+    login(form.get("email"), form.get("password"))
       .then((res) => {
-        console.log(res);
+        navigate("/");
       })
       .catch((err) => {
         alert(err.response.data.message);
