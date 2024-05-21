@@ -280,7 +280,7 @@ DocS: https://www.typescriptlang.org/docs/handbook/2/narrowing.html
 - I don't recommend you do it on your final project - many have tried including yours truly and the time crunch is too much. But out of bootcamp, fire up this lecture again and throw together a simple sample project to get your feet wet.
 - You can also "convert" apps to Typescript incrementally, which is nice. Remember, JS files will compile down to JS files too, since its a superset. So you can set up your tooling and have even just one file in Typescript.
 - So you can take your time on something if you want, and sprinkle just a little bit in here and there.
-- There are lots more functions and features too that you'll run in to so it's lots to learn! I still consider myself somewhere between novice and intermediate with TS.
+- There are lots more functions and features too that you'll run in to so it's lots to learn! I still consider myself somewhere around intermediate with TS.
 
 # Extra Goodies
 
